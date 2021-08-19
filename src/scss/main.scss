@@ -1,0 +1,345 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+
+/* 0. Reset ================================= */
+
+/* 
+If you want to add partials, use Sass Modules via @use:
+@use 'variables';
+
+Usage: partial-name.variable/mixin/function-name:
+background: variables.$primary-color;
+*/
+
+@use "reset";
+@use "variables";
+@use "mixins";
+
+/* 1. Main Layout ================================= */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: rgb(173, 224, 245);
+	font-family: variables.$main-font;
+}
+
+/* 2. Content ================================= */
+
+header{
+	background: white;
+	// margin: 0 auto;
+	// padding: 0;
+	width: 100%;
+	height:9vh;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+	
+	
+	.logo{
+		width: 8em;
+		// margin: 0 auto;
+		margin-left:-1em;	
+	}
+	.header-container__headerLinks{
+		display: flex;
+		margin: 1.7em 4em 0em 0em;
+		li{
+			margin-left: 1em;
+			a{
+				color: variables.$soft;
+				font-size: 1.5em;
+				&:hover{
+					color: rgb(29, 104, 131);
+					transition: ease-in-out .25s;
+					
+				}
+			}
+		}
+		
+	}
+	#home-link{
+		text-decoration: none;
+		// display: flex;
+		// flex-direction: row;
+		color: black;
+		
+		// justify-content: flex-start;
+		// align-items: flex-end;
+		position: absolute;
+		top: 30%;
+    	left: 5%;
+		.icons{
+			max-width: 24px;
+			// margin-top: 5px;
+			@include mixins.bp-medium{
+				margin-right:.5em ;
+			}
+		}
+		span{
+			text-transform: uppercase;
+			font-weight: 600;
+			letter-spacing: .2em ;
+			font-size: 21px;
+			margin-left:1em
+			
+		}
+	}
+	
+
+
+	.header-menu{ // the hamburger and nav parent
+		
+		z-index: 99;
+		position: absolute;
+		top: 0%;
+		right: 0%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		.nike-header-icon-container{
+			z-index: 100;
+			margin: 5px;
+			.icons{
+				margin-left: 10px;
+			}
+			
+		}
+		
+		#header-menu{
+			display: none;
+		}
+			
+		label {
+			margin-right: 1em;
+    		margin-top: 2.5em;
+			span{
+				cursor: pointer;
+				display: block;
+				width: 24px;
+				height: 4px;
+				// border-radius: 15px;
+				background: variables.$background;
+				position: relative;
+				transform-origin: center center;
+				transition: transform 250ms ease;
+				margin:5px;
+				@include mixins.bp-large{
+					display: none;
+				}
+				
+
+			}
+		}
+		#header-menu:checked ~ label {
+			span {
+				background: rgb(29, 104, 131);
+
+				&:nth-of-type(1) {
+					top: 25%;
+					transform: rotate(-45deg);	
+				}
+				&:nth-of-type(2) {
+					right: 0%;
+					transform: rotate(45deg);	
+				}
+				&:nth-of-type(3) {
+					opacity: 0;	
+				}
+				
+			}
+			
+		}
+		nav{
+			// display: none;
+			background: rgb(183, 204, 242);
+			background-image: url(/dist/img/tent.png);
+			background-repeat: no-repeat;
+			background-position: bottom right;
+			background-position-x:80% ;
+			position: absolute;
+			top: 115%;
+			right: 0;
+			width: 100vw;
+			z-index: -1;
+			height: 0vh;
+			transition:  .5s;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+			overflow: hidden;
+			
+			@include mixins.bp-medium{
+				overflow: visible;
+				top: 35%;
+    			right: 100%;
+				width: 60vw;
+			}
+
+			ul{
+				list-style: none;
+				text-align: left;
+				margin-top: 2em;
+				margin-left: 2em;
+				@include mixins.bp-large{
+					display: flex;
+    				flex-direction: row;
+					text-align: center;
+					margin-top: 2em;
+					align-items: center;
+					justify-content: normal;
+					
+
+				}
+				>li{
+					margin-bottom: 2em;
+					a{
+						color: rgb(0, 0, 0);
+						text-decoration: none;
+						font-weight: 500;
+						font-size: 1.5em;
+						letter-spacing: .2em;
+						
+						&:hover{
+							color: white;
+							transition: ease-in-out .25s;
+							@include mixins.bp-medium{
+								
+								color: rgb(130, 130, 130);
+							}
+						}
+						@include mixins.bp-medium{
+							font-size: 1em;
+							margin-right: 1em;
+							color: variables.$black;
+							
+						}
+						@include mixins.bp-large{
+							
+							margin-right: 2em;
+						}
+					}
+				}
+			}
+		}
+		#header-menu:checked ~ nav {
+			display: block;
+			height: 40vh;
+		}
+	}
+
+
+	
+	
+}
+.footer-container{
+	background-color: aliceblue;
+	@include mixins.bp-large{
+		display: flex;
+		align-content: stretch;
+		justify-content: center;
+		align-items: baseline;
+		flex-direction: row;
+	}
+	&__menuLinks, &__helpLinks{
+		ul{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 2em;
+			
+			li{
+				margin:.5em;
+				
+				a{
+					color: rgb(77, 77, 77);
+					text-decoration: none;
+					&:hover{
+						color: variables.$soft;
+						transition: ease-in-out .25s;
+						
+					}
+					
+				}
+			}
+		}
+		
+	}
+	
+	&__socials{
+		ul{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			// margin:.5em;
+			li{
+				margin:.5em;
+				a{
+					color: variables.$soft;
+					&:hover{
+						color: rgb(29, 104, 131);
+						transition: ease-in-out .25s;
+						
+					}
+				}
+			}
+		}
+	}
+	&__form{
+		display: flex;
+		flex-direction: column;
+		align-content: space-around;
+		align-items: center;
+		font-weight: 500 ;
+		margin-top:1em;
+		margin-bottom:1em;
+		
+		label{
+			margin-bottom:.5em;
+		}
+		.footer-container__text{
+			border:none;
+			width:13em;
+			height: 2em;
+
+		}
+		.footer-container__btn{
+			background: variables.$background;
+			color: white;
+			cursor: pointer;
+			border: none;
+			font-size: 1em;
+			margin-top:1em;
+			padding: .5em;
+			border-radius: .2em;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 10px;
+			&:hover{
+				background: rgb(29, 104, 131);
+				transition: ease-in-out .25s;
+				
+			}
+		}
+	}
+	p{
+		text-align: center;
+		span{
+			
+		}
+	}
+}
