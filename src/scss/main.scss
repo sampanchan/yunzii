@@ -34,8 +34,11 @@ background: variables.$primary-color;
 }
 
 body {
-	background: rgb(173, 224, 245);
+	background: variables.$background;
 	font-family: variables.$main-font;
+}
+.login-body{
+	background-color: #f6cdd6;
 }
 
 /* 2. Content ================================= */
@@ -45,7 +48,7 @@ header{
 	// margin: 0 auto;
 	// padding: 0;
 	width: 100%;
-	height:9vh;
+	height:10vh;
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -61,7 +64,7 @@ header{
 	}
 	.header-container__headerLinks{
 		display: flex;
-		margin: 1.7em 4em 0em 0em;
+		margin: 1.7em 5em 0em 0em;
 		li{
 			margin-left: 1em;
 			a{
@@ -130,10 +133,17 @@ header{
 			
 		label {
 			margin-right: 1em;
-    		margin-top: 2.5em;
+    		margin-top: 1.5em;
+			img{
+				width: 2.5em;
+				
+			}
+			.paw-close{
+				display: none;
+			}
 			span{
 				cursor: pointer;
-				display: block;
+				display: none;
 				width: 24px;
 				height: 4px;
 				// border-radius: 15px;
@@ -150,8 +160,15 @@ header{
 			}
 		}
 		#header-menu:checked ~ label {
+			.paw-open{
+				display: none;
+			}
+			.paw-close{
+				display: block;
+			}
 			span {
 				background: rgb(29, 104, 131);
+				display: none;
 
 				&:nth-of-type(1) {
 					top: 25%;
@@ -240,13 +257,341 @@ header{
 		}
 		#header-menu:checked ~ nav {
 			display: block;
-			height: 40vh;
+			height: 50vh;
 		}
 	}
 
 
 	
 	
+}
+.home-main{
+	margin: 1em;
+	place-self: center center;
+	
+	.hero-container{
+		position: relative;
+		background:url(/dist/img/keyboard1.jpg);
+		width: 94vw;
+		height: 80vh;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		border-radius: .5em;
+		&:hover{
+			background: url(/dist/img/keyboard1.jpg),hsla(292, 93%, 89%, 0.431);
+			background-blend-mode: soft-light;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			
+		}
+		label{
+			color: rgb(60, 60, 60);
+			font-weight: 800;
+			font-size: 2.5em;
+			position: absolute;
+			top:30%;
+			left: 15%;
+			text-transform: uppercase;
+		}
+		&__btn{
+			cursor: pointer;
+			color:white;
+			background: variables.$darkBlue;
+			border:none;
+			padding:.5em;
+			position: absolute;
+			left:25%;
+			top:40%;
+			font-size: 1.5em;
+			border-radius: .5em;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+			&:hover{
+				box-shadow: rgb(243 173 234 / 68%) 0px 5px 13px 2px;
+			}
+		}
+	}
+	.article-container{
+		margin: unset;
+		margin-top: 1em;
+		// text-align: center;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		figure{
+			width: 88vw;
+			:nth-of-type(1){
+				margin-top: 1em;
+			}
+			// justify-self: center;
+			img{
+				width: 94vw;
+				// height: 25vh;
+				border-radius: .5em;
+				margin-bottom:1em;
+			}
+			figcaption{
+				text-align: center;
+				label{
+					margin-top:1em;
+					text-transform: uppercase;
+					color: black;
+					font-weight: 700;
+					font-size: 1.3em;
+				}
+				p{
+					margin-top:1em;
+				}
+				input{
+					margin-top:1em;
+					color:white;
+					background: variables.$darkBlue;
+					border:none;
+					padding:.5em;
+					font-size: 1em;
+					border-radius: .5em;
+					box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+					transition: .5s ease-in-out;
+					&:hover{
+						box-shadow: rgb(14 50 62 / 51%) 0px 5px 13px 2px;
+					}
+				}
+			}
+		}
+	}
+	.category-container{
+		// background: white;
+		width: 94vw;
+		border-radius: .5em;
+		// margin: unset;
+		h2{
+			text-align: center;
+			padding: 1em;
+			margin-top: 1em;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: rgb(255, 255, 255);
+			
+		}
+		div{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(3, 1fr);
+			row-gap: .5em;
+			column-gap: .5em;
+			:nth-child(1){
+				background-image: url(/dist/img/cable.jpg);
+			}
+			:nth-child(2){
+				background-image: url(/dist/img/caps.jpg);
+			}
+			:nth-child(3){
+				background-image: url(/dist/img/wireless.jpg);
+			}
+			:nth-child(4){
+				background-image: url(/dist/img/compact.jpg);
+			}
+			:nth-child(5){
+				background-image: url(/dist/img/micro.jpg);
+			}
+			:nth-child(6){
+				background-image: url(/dist/img/micro2.jpg);
+			}
+			
+			button{
+				background: rgba(32, 34, 92, 0.338);
+				background-blend-mode:soft-light;
+				height: 25vh;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: none;
+				border-radius: .5em;
+				color: rgb(255, 255, 255);
+				font-size: 1.2em;
+				&:hover{
+					background-blend-mode: multiply;
+					cursor: pointer;
+					
+				}
+			
+	
+			}
+		}
+		
+	}
+	.trending-container{
+		background:white;
+		margin:0;
+		border-radius: .5em;
+		text-align: center;
+		padding-bottom: 1em;
+		h2{
+			text-align: center;
+			padding: 1em;
+			margin-top: 1em;
+			font-size: 1.5em;
+			text-transform: uppercase;
+			font-weight: 700;
+			color: variables.$darkBlue;
+		}
+		figure{
+			margin-bottom: 1em;
+			img{
+				width: 70vw;
+				margin-bottom:1em;
+			}
+			figcaption{
+				:nth-child(2){
+					color: red;
+					font-weight: bold;
+				}
+				:nth-child(3){
+					text-decoration: line-through;
+				}
+				label{
+					margin-top:1em;
+					text-transform: uppercase;
+					color: black;
+					font-weight: 700;
+					font-size: 1.3em;
+					
+				}
+				p{
+					margin-top:1em;
+				
+				}
+				input{
+					margin-top:1em;
+					color:black;
+					background: variables.$soft;
+					border:none;
+					padding:.5em;
+					width: 5em;
+					font-size: 1em;
+					border-radius: .5em;
+					box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+					transition: .5s ease-in-out;
+					
+					&:hover{
+						background: variables.$green;
+						box-shadow: rgb(14 50 62 / 51%) 0px 5px 13px 2px;
+					}
+				}
+			}
+		}
+	}
+}
+//login page
+.login-main{
+
+	position: relative;
+	// background-image: url(/dist/img/ok-computer-dribbble.gif);
+	width: 100vw;
+	height: 70vh;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-grow:1 ;
+	
+	h1{
+		font-weight: 900;
+		color: black;
+		font-size: 3em;
+		text-align: center;
+		margin-bottom: 1em;
+		// margin-top: -3em;
+		// position: absolute;
+		// top:-5%;
+
+
+
+	}
+	form{
+		background:white;
+		margin:.8em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    	align-items: center;
+		padding: 3em;
+		width: 95vw;
+		margin-top: 2em;
+		border-radius: .5em;
+		box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+		
+		label{
+			margin-top: .5em;
+			font-size: 1em;
+		}
+		.text{
+			border: none;
+			background:rgb(222, 222, 222);
+			margin-top: 1em;
+			font-size: 1em;
+		}
+		.submit, button{
+			border: none;
+			background: variables.$soft;
+			padding: .4em;
+			width: 25%;
+			margin-top: 1em;
+			font-size: 1em;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+			transition: .3s ease-in-out;
+			margin: 1em;
+			font-size: 1em;
+			&:hover{
+				color:#f6cdd6;
+
+			}
+		}
+		button{
+			background: #f6cdd6;
+			text-transform: uppercase;
+			transition: .3s ease-in-out;
+			&:hover{
+				background:variables.$background;
+
+			}
+		}
+	}
+
+	// ::after{
+	// 	content: url(/dist/img/comp.gif);
+	// 	position: absolute;
+	// 	bottom: 0;
+		
+	// 	// background-repeat: no-repeat;
+	// 	// right:10%;
+	// 	width: 3em;
+		
+	// }
+}
+.team-main{
+	&__backgroundBanner{
+		background-image: url(/dist/img/banner.jpg);
+		width: 100vw;
+		height:70vw;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		label{
+			
+			color: rgb(60, 60, 60);
+			font-weight: 800;
+			font-size: 2.5em;
+			position: absolute;
+			top:40%;
+			left: 50%;
+			text-transform: uppercase;
+		}
+	}
+
 }
 .footer-container{
 	background-color: aliceblue;

@@ -162,15 +162,19 @@ background: variables.$primary-color;
 }
 
 body {
-  background: #ade0f5;
+  background: #cceaf5;
   font-family: "Raleway", sans-serif;
+}
+
+.login-body {
+  background-color: #f6cdd6;
 }
 
 /* 2. Content ================================= */
 header {
   background: white;
   width: 100%;
-  height: 9vh;
+  height: 10vh;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -184,7 +188,7 @@ header .logo {
 }
 header .header-container__headerLinks {
   display: flex;
-  margin: 1.7em 4em 0em 0em;
+  margin: 1.7em 5em 0em 0em;
 }
 header .header-container__headerLinks li {
   margin-left: 1em;
@@ -240,14 +244,20 @@ header .header-menu #header-menu {
 }
 header .header-menu label {
   margin-right: 1em;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
+}
+header .header-menu label img {
+  width: 2.5em;
+}
+header .header-menu label .paw-close {
+  display: none;
 }
 header .header-menu label span {
   cursor: pointer;
-  display: block;
+  display: none;
   width: 24px;
   height: 4px;
-  background: #ade0f5;
+  background: #cceaf5;
   position: relative;
   -ms-transform-origin: center center;
       transform-origin: center center;
@@ -259,8 +269,15 @@ header .header-menu label span {
     display: none;
   }
 }
+header .header-menu #header-menu:checked ~ label .paw-open {
+  display: none;
+}
+header .header-menu #header-menu:checked ~ label .paw-close {
+  display: block;
+}
 header .header-menu #header-menu:checked ~ label span {
   background: #1d6883;
+  display: none;
 }
 header .header-menu #header-menu:checked ~ label span:nth-of-type(1) {
   top: 25%;
@@ -348,7 +365,329 @@ header .header-menu nav ul > li a:hover {
 }
 header .header-menu #header-menu:checked ~ nav {
   display: block;
-  height: 40vh;
+  height: 50vh;
+}
+
+.home-main {
+  margin: 1em;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: center;
+  place-self: center center;
+}
+.home-main .hero-container {
+  position: relative;
+  background: url(/dist/img/keyboard1.jpg);
+  width: 94vw;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 0.5em;
+}
+.home-main .hero-container:hover {
+  background: url(/dist/img/keyboard1.jpg), rgba(246, 201, 253, 0.431);
+  background-blend-mode: soft-light;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home-main .hero-container label {
+  color: #3c3c3c;
+  font-weight: 800;
+  font-size: 2.5em;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  text-transform: uppercase;
+}
+.home-main .hero-container__btn {
+  cursor: pointer;
+  color: white;
+  background: #1d6883;
+  border: none;
+  padding: 0.5em;
+  position: absolute;
+  left: 25%;
+  top: 40%;
+  font-size: 1.5em;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+}
+.home-main .hero-container__btn:hover {
+  box-shadow: rgba(243, 173, 234, 0.68) 0px 5px 13px 2px;
+}
+.home-main .article-container {
+  margin: unset;
+  margin-top: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+.home-main .article-container > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.home-main .article-container figure {
+  width: 88vw;
+}
+.home-main .article-container figure :nth-of-type(1) {
+  margin-top: 1em;
+}
+.home-main .article-container figure img {
+  width: 94vw;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+.home-main .article-container figure figcaption {
+  text-align: center;
+}
+.home-main .article-container figure figcaption label {
+  margin-top: 1em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.home-main .article-container figure figcaption p {
+  margin-top: 1em;
+}
+.home-main .article-container figure figcaption input {
+  margin-top: 1em;
+  color: white;
+  background: #1d6883;
+  border: none;
+  padding: 0.5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+  transition: 0.5s ease-in-out;
+}
+.home-main .article-container figure figcaption input:hover {
+  box-shadow: rgba(14, 50, 62, 0.51) 0px 5px 13px 2px;
+}
+.home-main .category-container {
+  width: 94vw;
+  border-radius: 0.5em;
+}
+.home-main .category-container h2 {
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+}
+.home-main .category-container div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 0.5em 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr 0.5em 1fr 0.5em 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 0.5em;
+  -webkit-column-gap: 0.5em;
+          column-gap: 0.5em;
+}
+.home-main .category-container div > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+.home-main .category-container div > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+.home-main .category-container div > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+.home-main .category-container div > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+.home-main .category-container div > *:nth-child(5) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+.home-main .category-container div > *:nth-child(6) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+.home-main .category-container div :nth-child(1) {
+  background-image: url(/dist/img/cable.jpg);
+}
+.home-main .category-container div :nth-child(2) {
+  background-image: url(/dist/img/caps.jpg);
+}
+.home-main .category-container div :nth-child(3) {
+  background-image: url(/dist/img/wireless.jpg);
+}
+.home-main .category-container div :nth-child(4) {
+  background-image: url(/dist/img/compact.jpg);
+}
+.home-main .category-container div :nth-child(5) {
+  background-image: url(/dist/img/micro.jpg);
+}
+.home-main .category-container div :nth-child(6) {
+  background-image: url(/dist/img/micro2.jpg);
+}
+.home-main .category-container div button {
+  background: rgba(32, 34, 92, 0.338);
+  background-blend-mode: soft-light;
+  height: 25vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 1.2em;
+}
+.home-main .category-container div button:hover {
+  background-blend-mode: multiply;
+  cursor: pointer;
+}
+.home-main .trending-container {
+  background: white;
+  margin: 0;
+  border-radius: 0.5em;
+  text-align: center;
+  padding-bottom: 1em;
+}
+.home-main .trending-container h2 {
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1d6883;
+}
+.home-main .trending-container figure {
+  margin-bottom: 1em;
+}
+.home-main .trending-container figure img {
+  width: 70vw;
+  margin-bottom: 1em;
+}
+.home-main .trending-container figure figcaption :nth-child(2) {
+  color: red;
+  font-weight: bold;
+}
+.home-main .trending-container figure figcaption :nth-child(3) {
+  text-decoration: line-through;
+}
+.home-main .trending-container figure figcaption label {
+  margin-top: 1em;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.home-main .trending-container figure figcaption p {
+  margin-top: 1em;
+}
+.home-main .trending-container figure figcaption input {
+  margin-top: 1em;
+  color: black;
+  background: #b7ccf2;
+  border: none;
+  padding: 0.5em;
+  width: 5em;
+  font-size: 1em;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+  transition: 0.5s ease-in-out;
+}
+.home-main .trending-container figure figcaption input:hover {
+  background: #64f0bf;
+  box-shadow: rgba(14, 50, 62, 0.51) 0px 5px 13px 2px;
+}
+
+.login-main {
+  position: relative;
+  width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-grow: 1;
+}
+.login-main h1 {
+  font-weight: 900;
+  color: black;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.login-main form {
+  background: white;
+  margin: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em;
+  width: 95vw;
+  margin-top: 2em;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+}
+.login-main form label {
+  margin-top: 0.5em;
+  font-size: 1em;
+}
+.login-main form .text {
+  border: none;
+  background: #dedede;
+  margin-top: 1em;
+  font-size: 1em;
+}
+.login-main form .submit, .login-main form button {
+  border: none;
+  background: #b7ccf2;
+  padding: 0.4em;
+  width: 25%;
+  margin-top: 1em;
+  font-size: 1em;
+}
+.login-main form a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+  margin: 1em;
+  font-size: 1em;
+}
+.login-main form a:hover {
+  color: #f6cdd6;
+}
+.login-main form button {
+  background: #f6cdd6;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+.login-main form button:hover {
+  background: #cceaf5;
+}
+
+.team-main__backgroundBanner {
+  background-image: url(/dist/img/banner.jpg);
+  width: 100vw;
+  height: 70vw;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.team-main__backgroundBanner label {
+  color: #3c3c3c;
+  font-weight: 800;
+  font-size: 2.5em;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-transform: uppercase;
 }
 
 .footer-container {
@@ -413,7 +752,7 @@ header .header-menu #header-menu:checked ~ nav {
   height: 2em;
 }
 .footer-container__form .footer-container__btn {
-  background: #ade0f5;
+  background: #cceaf5;
   color: white;
   cursor: pointer;
   border: none;
