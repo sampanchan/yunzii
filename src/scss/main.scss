@@ -40,7 +40,9 @@ body {
 .login-body{
 	background-color: #f6cdd6;
 }
-
+.team-body{
+	background-color: #ffcdff;
+}
 /* 2. Content ================================= */
 
 header{
@@ -136,6 +138,9 @@ header{
     		margin-top: 1.5em;
 			img{
 				width: 2.5em;
+				@include mixins.bp-large{
+					display: none;
+				}
 				
 			}
 			.paw-close{
@@ -270,7 +275,8 @@ header{
 	place-self: center center;
 	
 	.hero-container{
-		position: relative;
+		
+		// position: relative;
 		background:url(/dist/img/keyboard1.jpg);
 		width: 94vw;
 		height: 80vh;
@@ -278,21 +284,31 @@ header{
 		background-size: cover;
 		background-repeat: no-repeat;
 		border-radius: .5em;
-		&:hover{
+		display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+		transition: all .5s;
+		&:hover,&:focus{
 			background: url(/dist/img/keyboard1.jpg),hsla(292, 93%, 89%, 0.431);
 			background-blend-mode: soft-light;
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			
+			
+		}
+		&:focus{
+			transform: scale(1.2);
 		}
 		label{
 			color: rgb(60, 60, 60);
 			font-weight: 800;
 			font-size: 2.5em;
-			position: absolute;
-			top:30%;
-			left: 15%;
+			margin-bottom: 1em;
+			// position: absolute;
+			// top:30%;
+			// left: 15%;
 			text-transform: uppercase;
 		}
 		&__btn{
@@ -301,9 +317,9 @@ header{
 			background: variables.$darkBlue;
 			border:none;
 			padding:.5em;
-			position: absolute;
-			left:25%;
-			top:40%;
+			// position: absolute;
+			// left:25%;
+			// top:40%;
 			font-size: 1.5em;
 			border-radius: .5em;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
@@ -315,12 +331,21 @@ header{
 	.article-container{
 		margin: unset;
 		margin-top: 1em;
+		display: flex;
+		flex-direction: column;
+		@include mixins.bp-medium{
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-content: space-around;
+			justify-content: space-between;
+			align-items: center;
+		}
 		// text-align: center;
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
+		// display: grid;
+		// grid-template-columns: 1fr;
+		// grid-template-rows: 1fr;
 		figure{
-			width: 88vw;
+			// width: 88vw;
 			:nth-of-type(1){
 				margin-top: 1em;
 			}
@@ -330,6 +355,9 @@ header{
 				// height: 25vh;
 				border-radius: .5em;
 				margin-bottom:1em;
+				@include mixins.bp-medium{
+					width: 40vw;
+				}
 			}
 			figcaption{
 				text-align: center;
@@ -381,11 +409,25 @@ header{
 			grid-template-rows: repeat(3, 1fr);
 			row-gap: .5em;
 			column-gap: .5em;
+			@include mixins.bp-large{
+				
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: repeat(2, 1fr);
+			}
 			:nth-child(1){
 				background-image: url(/dist/img/cable.jpg);
+				// @include mixins.bp-large{
+				// 	grid-row: 1;
+				// 	grid-column: 1;
+				// }
+				
 			}
 			:nth-child(2){
 				background-image: url(/dist/img/caps.jpg);
+				// @include mixins.bp-large{
+				// 	grid-row: 1;
+				// 	grid-column: 2;
+				// }
 			}
 			:nth-child(3){
 				background-image: url(/dist/img/wireless.jpg);
@@ -416,6 +458,10 @@ header{
 					cursor: pointer;
 					
 				}
+				@include mixins.bp-large{
+					height: 50vh;
+					
+				}
 			
 	
 			}
@@ -437,51 +483,69 @@ header{
 			font-weight: 700;
 			color: variables.$darkBlue;
 		}
-		figure{
-			margin-bottom: 1em;
-			img{
-				width: 70vw;
-				margin-bottom:1em;
+		div{
+			
+			@include mixins.bp-medium{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: baseline;
 			}
-			figcaption{
-				:nth-child(2){
-					color: red;
-					font-weight: bold;
+			
+
+			figure{
+				margin-bottom: 1em;
+				img{
+					width: 70vw;
+					margin-bottom:1em;
+					@include mixins.bp-medium{
+						width: 45vw;
+					}
+					@include mixins.bp-large{
+						width: 30vw;
+					}
 				}
-				:nth-child(3){
-					text-decoration: line-through;
-				}
-				label{
-					margin-top:1em;
-					text-transform: uppercase;
-					color: black;
-					font-weight: 700;
-					font-size: 1.3em;
+				figcaption{
+					:nth-child(2){
+						color: red;
+						font-weight: bold;
+					}
+					:nth-child(3){
+						text-decoration: line-through;
+					}
+					label{
+						margin-top:1em;
+						text-transform: uppercase;
+						color: black;
+						font-weight: 700;
+						font-size: 1.3em;
+						
+					}
+					p{
+						margin-top:1em;
 					
-				}
-				p{
-					margin-top:1em;
-				
-				}
-				input{
-					margin-top:1em;
-					color:black;
-					background: variables.$soft;
-					border:none;
-					padding:.5em;
-					width: 5em;
-					font-size: 1em;
-					border-radius: .5em;
-					box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
-					transition: .5s ease-in-out;
-					
-					&:hover{
-						background: variables.$green;
-						box-shadow: rgb(14 50 62 / 51%) 0px 5px 13px 2px;
+					}
+					input{
+						margin-top:1em;
+						color:black;
+						background: variables.$soft;
+						border:none;
+						padding:.5em;
+						width: 5em;
+						font-size: 1em;
+						border-radius: .5em;
+						box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+						transition: .5s ease-in-out;
+						
+						&:hover{
+							background: variables.$green;
+							box-shadow: rgb(14 50 62 / 51%) 0px 5px 13px 2px;
+						}
 					}
 				}
 			}
 		}
+		
 	}
 }
 //login page
@@ -518,6 +582,7 @@ header{
 		padding: 3em;
 		width: 95vw;
 		margin-top: 2em;
+		margin-bottom: 2em;
 		border-radius: .5em;
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 		
@@ -572,27 +637,82 @@ header{
 		
 	// }
 }
-.team-main{
-	&__backgroundBanner{
-		background-image: url(/dist/img/banner.jpg);
+//team page
+.team-banner{
+	background-image: url(/dist/img/banner.jpg);
 		width: 100vw;
 		height:70vw;
 		background-position: center;
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
+		margin:0;
+		position: relative;
+		
+	
+		
 		label{
 			
-			color: rgb(60, 60, 60);
+			color: #6f5fac;
 			font-weight: 800;
 			font-size: 2.5em;
 			position: absolute;
-			top:40%;
+			// top:40%;
+			bottom:0;
 			left: 50%;
 			text-transform: uppercase;
 		}
-	}
+	
 
 }
+.team-main{
+	background:#ffcdff;
+	
+	
+	&__aboutSection, &__teamSection{
+		color:#6f5fac;
+		line-height: 2em;
+		padding:1em;
+		margin-top: 2em;
+		
+		h1{
+			color: #ffffff;
+				font-weight: 800;
+				font-size: 2em;
+				span{
+					text-transform: uppercase;
+				}
+		}
+	}
+	&__teamSection{
+		
+		margin-top: 2em;
+		article{
+			text-align: left;
+		}
+		figure{
+			margin-top:2em;
+			text-align:  center;
+			img{
+				width: 75%;
+				border-radius: 50%;
+				border:solid .2em;
+				border-color: variables.$soft;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+			}
+			figcaption{
+				color: #6f5fac;
+				font-size: 1.5em;
+				font-weight: 700;
+				span{
+					color: white;
+					font-size: .75em;
+				}
+			}
+		}
+	}
+}
+
+//footer
 .footer-container{
 	background-color: aliceblue;
 	@include mixins.bp-large{
@@ -683,8 +803,14 @@ header{
 	}
 	p{
 		text-align: center;
-		span{
-			
-		}
+		
 	}
 }
+
+/* 3. Animations ================================= */
+
+// .active{
+// 	transform: translateX(100px);
+// 	transition: translateX(100px).5s ease-in;
+// }
+

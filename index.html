@@ -51,11 +51,14 @@
 		</header>
 		<main class="home-main">
 			<section class="hero-container">
-				<label for="heroBtn" class="hero-container__label">Yunzii Keyboard</label>
-				<button class="hero-container__btn" id="heroBtn">Discover Keyboard</button>
+				<div class="hero-container__hero">
+					<label for="heroBtn" class="hero-container__label">Yunzii Keyboard</label>	
+				</div>
+				
+			<button class="hero-container__btn" id="heroBtn" aria-label="Discover Yunzzi Macaron Keyboard">Discover Keyboard</button>
 			</section>
-			<article class="article-container">
-				<figure>
+			<section class="article-container">
+				<figure aria-label="keyboard">
 					<img src="/dist/img/keyboard8.jpg" alt="rainbow-84-key-r-g-b-hotswap-wired-mechanical-gaming-keyboard-with-p-b-t-shine-through-caps-rainbow-blue">
 					<figcaption>
 						<label for="Yunzii rainbow blue">yunzii blue rainbow keyboard</label>
@@ -78,75 +81,78 @@
 							<input type="button" value="View Keyboard"> 
 					</figcaption>
 				</figure>
-			</article>
+			</section>
 			
 			<article class="category-container"> 
-				<h2>what to shop?</h2>
-				<div>
-					<button>Keyboard Cable</button>
+				<h2 aria-label="what to shop">what to shop?</h2>
+			<div id="what to shop">
+					<button id="btn-left">Keyboard Cable</button>
 					<button>Keycaps</button>
-					<button>Wireless</button>
-					<button>Compact- 82 keys</button>
-					<button>Micro- 61 + Keys</button>
+					<button id="btn-left">Wireless</button>
+					<button >Compact- 82 keys</button>
+					<button id="btn-left">Micro- 61 + Keys</button>
 					<button>Mini - 68 + Keys</button>
 				</div>
 			</article>
 			<article class="trending-container">
 				<h2>Trending Keyboards</h2>
-				<figure>
-					<img src="/dist/img/trending1.jpg" alt="k-c-84-s-milk-honey-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
-					<figcaption>
-						<label for="milkHoney">yunzii milk honey keyboard</label>
-							<p>$95 USD</p>
-							<p>$105 USD</p>
-							<input type="button" value="Buy" id="milkHoney"> 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/trending2.jpg" alt="k-c-84-s-p-red-84-front-craved-keys-hotswap-wireled-mechanical-keyboard">
-					<figcaption>
-						<label for="SP-Red">yunzii SP-Red 84 keyboard</label>
-							<p>$95 USD</p>
-							<p>$105 USD</p>
-							<input type="button" value="Buy" id="SP-Red"> 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/trending5.jpg" alt="milk-keycap-set">
-					<figcaption>
-						<label for="milk">yunzii milk keybcap set</label>
-							<p>$45 USD</p>
-							<p>$59 USD</p>
-							<input type="button" value="Buy" id="milk"> 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/trending3.jpg" alt="keycool-holiday-84-mechanical-gaming-keyboard-with-cherry-m-x-switch">
-					<figcaption>
-						<label for="Keycool">yunzii Keycool Holiday keyboard</label>
-							<p>$115 USD</p>
-							<p>$125 USD</p>
-							<input type="button" value="Buy" id="Keycool"> 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/trending6.jpg" alt="doodle-keycap-set">
-					<figcaption>
-						<label for="doodle">yunzii doodle keycap set</label>
-							<p>$45 USD</p>
-							<p>$59 USD</p>
-							<input type="button" value="Buy" id="doodle"> 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/trending4.jpg" alt="macaron-84-key-r-g-b-hotswap-wire-mechanical-gaming-keyboard-with-p-b-t-dye-subbed-key-caps">
-					<figcaption>
-						<label for="Macaron">yunzii macaron keyboard</label>
-							<p>$100 USD</p>
-							<p>$125 USD</p>
-							<input type="button" value="Buy" id="Macaron"> 
-					</figcaption>
-				</figure>
+				<div>
+					<figure>
+						<img src="/dist/img/trending1.jpg" alt="k-c-84-s-milk-honey-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
+						<figcaption>
+							<label for="milkHoney">yunzii milk honey keyboard</label>
+								<p>$95 USD</p>
+								<p>$105 USD</p>
+								<input type="button" value="Buy" id="milkHoney"> 
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="/dist/img/trending2.jpg" alt="k-c-84-s-p-red-84-front-craved-keys-hotswap-wireled-mechanical-keyboard">
+						<figcaption>
+							<label for="SP-Red">yunzii SP-Red 84 keyboard</label>
+								<p>$95 USD</p>
+								<p>$105 USD</p>
+								<input type="button" value="Buy" id="SP-Red"> 
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="/dist/img/trending5.jpg" alt="milk-keycap-set">
+						<figcaption>
+							<label for="milk">yunzii milk keybcap set</label>
+								<p>$45 USD</p>
+								<p>$59 USD</p>
+								<input type="button" value="Buy" id="milk"> 
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="/dist/img/trending3.jpg" alt="keycool-holiday-84-mechanical-gaming-keyboard-with-cherry-m-x-switch">
+						<figcaption>
+							<label for="Keycool">yunzii Keycool Holiday keyboard</label>
+								<p>$115 USD</p>
+								<p>$125 USD</p>
+								<input type="button" value="Buy" id="Keycool"> 
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="/dist/img/trending6.jpg" alt="doodle-keycap-set">
+						<figcaption>
+							<label for="doodle">yunzii doodle keycap set</label>
+								<p>$45 USD</p>
+								<p>$59 USD</p>
+								<input type="button" value="Buy" id="doodle"> 
+						</figcaption>
+					</figure>
+					<figure>
+						<img src="/dist/img/trending4.jpg" alt="macaron-84-key-r-g-b-hotswap-wire-mechanical-gaming-keyboard-with-p-b-t-dye-subbed-key-caps">
+						<figcaption>
+							<label for="Macaron">yunzii macaron keyboard</label>
+								<p>$100 USD</p>
+								<p>$125 USD</p>
+								<input type="button" value="Buy" id="Macaron"> 
+						</figcaption>
+					</figure>
+				</div>
+				
 			</article>
 		</main>
 		
@@ -191,6 +197,7 @@
 			</form>
 			<p>&#169; 2021, Yunzii Mechanical Keyboards</p>
 		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 		<script src="dist/js/main.js"></script>
 	</body>
 </html>
