@@ -110,6 +110,9 @@ header{
 	.logo{
 		width: 8em;
 		margin-left:-1em;
+		animation-name: logo;
+		animation-duration: 2s;
+		animation-iteration-count: 1;
 		@include mixins.bp-medium{
 			width: 7em;
 		}	
@@ -392,6 +395,11 @@ header{
 		
 		figure{
 			margin-top: 1em;
+			// opacity: 0;
+			transition: 1s ease-in-out;
+			&.active{
+				opacity: 1;
+			}
 			
 			@include mixins.bp-medium{
 				text-align: center;
@@ -417,7 +425,7 @@ header{
 			figcaption{
 				text-align: center;
 				@include mixins.bp-large{
-					margin-left:3.5em;
+					margin-left:2em;
 				}
 				label{
 					margin-top:1em;
@@ -925,6 +933,14 @@ header{
 	}
 	100%{
 		transform: scale(.8);
+	}
+}
+@keyframes logo{
+	0%{
+		transform: translateX(-3em);
+	}
+	100%{
+		transform: translateX(0em);
 	}
 }
 

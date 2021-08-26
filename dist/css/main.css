@@ -241,6 +241,12 @@ header {
 header .logo {
   width: 8em;
   margin-left: -1em;
+  -webkit-animation-name: logo;
+          animation-name: logo;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 @media screen and (min-width: 768px) {
   header .logo {
@@ -535,6 +541,10 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .home-main .article-container figure {
   margin-top: 1em;
+  transition: 1s ease-in-out;
+}
+.home-main .article-container figure.active {
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .home-main .article-container figure {
@@ -569,7 +579,7 @@ header .header-menu #header-menu:checked ~ nav {
 }
 @media screen and (min-width: 992px) {
   .home-main .article-container figure figcaption {
-    margin-left: 3.5em;
+    margin-left: 2em;
   }
 }
 .home-main .article-container figure figcaption label {
@@ -1091,6 +1101,22 @@ header .header-menu #header-menu:checked ~ nav {
   }
   100% {
     transform: scale(0.8);
+  }
+}
+@-webkit-keyframes logo {
+  0% {
+    transform: translateX(-3em);
+  }
+  100% {
+    transform: translateX(0em);
+  }
+}
+@keyframes logo {
+  0% {
+    transform: translateX(-3em);
+  }
+  100% {
+    transform: translateX(0em);
   }
 }
 /*# sourceMappingURL=main.css.map */
