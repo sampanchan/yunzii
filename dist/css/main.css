@@ -337,6 +337,12 @@ header .header-menu .hamburger-a label {
 }
 header .header-menu .hamburger-a label img {
   width: 2.5em;
+  -webkit-animation-name: key-cap;
+          animation-name: key-cap;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 @media screen and (min-width: 992px) {
   header .header-menu .hamburger-a label img {
@@ -973,6 +979,7 @@ header .header-menu #header-menu:checked ~ nav {
 
 .footer-container {
   background-color: aliceblue;
+  padding-top: 2em;
 }
 @media screen and (min-width: 992px) {
   .footer-container {
@@ -1070,4 +1077,20 @@ header .header-menu #header-menu:checked ~ nav {
 }
 
 /* 3. Animations ================================= */
+@-webkit-keyframes key-cap {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+@keyframes key-cap {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
 /*# sourceMappingURL=main.css.map */
