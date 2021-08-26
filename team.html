@@ -21,33 +21,36 @@
 				<img src="/dist/img/yunziiLogo.png" alt="Yunzii" class="logo">
 			</a>
 			<ul class="header-container__headerLinks">
-				<li><a href=""><i class="fas fa-search"></i></a></li>
-				<li><a href=""><i class="fas fa-user"></i></a></li>
-				<li><a href=""><i class="fas fa-shopping-bag"></i></a></li>
+				<li><a href="" aria-label="search"><i class="fas fa-search"></i></a></li>
+				<li><a href="" aria-label="account"><i class="fas fa-user"></i></a></li>
+				<li><a href="" aria-label="shopping-bag"><i class="fas fa-shopping-bag"></i></a></li>
 			</ul>
+			
 			<div class="header-menu">
-				<input type="checkbox" id="header-menu" /> 
-				<label for="header-menu" class="nike-menu">
-					<img src="dist/img/paw.png" alt="" class="paw-open">
-					<img src="dist/img/paws2.png" alt="" class="paw-close">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-				
+				<input type="checkbox" id="header-menu" />
+				<a href="" aria-label="hamburger-menu" class="hamburger-a">
+					
+
+					<label for="header-menu" class="nike-menu" aria-label="menu">
+						<img src="dist/img/paw.png" alt="" class="paw-open">
+						<img src="dist/img/paws2.png" alt="" class="paw-close">
+					</label>
+				</a>
 				<nav>
 					<ul>
-						<li><a href="#">Home</a></li>
+						
 						<li><a href="#">Keyboards</a></li>
 						<li><a href="#">Keycaps</a></li>
-						<li><a href="#">Keyboard Switches</a></li>
-						<li><a href="#">Keyboard Cables</a></li>
+						<li><a href="#">Switches</a></li>
+						<li><a href="#"> Cables</a></li>
 						<li><a href="#">Software</a></li>
 						<li><a href="login.html">Login</a></li>
+						<li><a href="team.html">Our Team</a></li>
 						
 					</ul>
 				</nav>	
 			</div>
+			
 		</header>
 	    <section class="team-banner" id="banner">
             
@@ -59,11 +62,11 @@
 			<section class="team-main__aboutSection" aria-label="about">
 				<h1 class="team-main__h1" id="about">About <span>yunzii</span></h1>
 				<article>
-					Tiramisu tiramisu macaroon sesame snaps tootsie roll shortbread. Chupa chups tootsie roll gingerbread bonbon ice cream. Carrot cake muffin sweet roll croissant I love. Powder chocolate cotton candy chocolate brownie cookie.
-	
-					Jelly-o topping cotton candy jujubes I love cake tootsie roll gummi bears. Sweet roll cupcake wafer biscuit croissant tootsie roll jelly-o shortbread chocolate. Tiramisu dessert apple pie chocolate cake pastry jelly-o. Shortbread brownie I love I love fruitcake gummies croissant chocolate bar gummies.
-	
-					Fruitcake ice cream cotton candy liquorice chocolate. I love danish I love bonbon cotton candy pastry cotton candy. Chocolate wafer dessert muffin cotton candy tart cupcake.
+					Cupcake ipsum dolor sit amet marshmallow pastry liquorice chocolate. Candy canes topping carrot cake cake I love muffin. Jelly-o I love bear claw lemon drops I love cake tootsie roll I love candy. Tootsie roll jelly beans toffee icing lollipop I love candy. I love liquorice gingerbread jelly I love sesame snaps gingerbread shortbread gummi bears. Sweet roll cookie liquorice fruitcake tiramisu. Jelly beans dragée gingerbread tootsie roll cheesecake lollipop. Chocolate topping dessert sugar plum brownie lemon drops tootsie roll. Icing soufflé cake cupcake chocolate bar muffin I love.</br>
+
+					Halvah fruitcake gingerbread powder tiramisu jelly beans candy canes I love pastry. Cotton candy apple pie soufflé gingerbread danish. Jelly brownie I love I love danish cake sesame snaps carrot cake. Bear claw marzipan sweet lemon drops pastry chocolate cake jelly-o. Pudding candy chocolate cake I love pie icing I love brownie. Gummies marshmallow oat cake chocolate cake gingerbread. Jujubes cupcake gingerbread apple pie chocolate marshmallow lollipop liquorice marshmallow. Bonbon marshmallow cake cupcake wafer. Fruitcake I love candy canes jelly beans liquorice.</br>
+
+					Halvah I love pudding chupa chups I love gummi bears candy. Biscuit jujubes icing cake jelly pastry I love. Candy canes donut icing I love croissant apple pie. Sesame snaps soufflé sesame snaps chocolate I love ice cream croissant ice cream. Lemon drops sesame snaps apple pie cake dessert lollipop oat cake fruitcake. I love danish halvah dragée toffee I love lemon drops cheesecake liquorice. Dessert bear claw croissant wafer apple pie I love brownie fruitcake. Caramels tart ice cream sweet macaroon marzipan soufflé. Pudding macaroon chupa chups chocolate cake gummies I love cookie. Halvah I love lemon drops cookie jelly sweet roll apple pie apple pie I love.
 				</article>
 			</section>
 			<section class="team-main__teamSection" aria-label="ourTeam">
@@ -75,18 +78,20 @@
 	
 					Fruitcake ice cream cotton candy liquorice chocolate. I love danish I love bonbon cotton candy pastry cotton candy. Chocolate wafer dessert muffin cotton candy tart cupcake.
 				</article>
-				<figure>
-					<img src="/dist/img/lady2.jpg" alt="c-e-o-Erica-tran-smiling">
-					<figcaption>Erica Tran </br> <span>Founder & CEO</span></figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/lady1.jpg" alt="c-o-o-Abby-Smith-smiling">
-					<figcaption>Abby Smith </br> <span>Chief Operating Officer</span></figcaption>
-				</figure>
-				<figure>
-					<img src="/dist/img/man.jpg" alt="executive-director-fabian-alejandro-smiling">
-					<figcaption>Fabian Alejandro</br> <span>Executive Director</span></figcaption>
-				</figure>
+				<div>
+					<figure>
+						<img src="/dist/img/lady2.jpg" alt="c-e-o-Erica-tran-smiling">
+						<figcaption>Erica Tran </br> <span>Founder & CEO</span></figcaption>
+					</figure>
+					<figure>
+							<img src="/dist/img/lady1.jpg" alt="c-o-o-Abby-Smith-smiling">
+							<figcaption>Abby Smith </br> <span>Chief Operating Officer</span></figcaption>
+					</figure>
+					<figure>
+						<img src="/dist/img/man.jpg" alt="executive-director-fabian-alejandro-smiling">
+						<figcaption>Fabian Alejandro</br> <span>Executive Director</span></figcaption>
+					</figure>
+				</div>
 			</section>
 			
         </main>
@@ -94,6 +99,7 @@
 		<footer class="footer-container">
 			<div class="footer-container__menuLinks">
 				<ul>
+					<h3>Menu</h3>
 					<li><a href="">Home</a></li>
 					<li><a href="">Keyboard</a></li>
 					<li><a href="">Keycaps</a></li>
@@ -104,13 +110,13 @@
 			</div>
 			<div class="footer-container__helpLinks">
 				<ul>
-					
+					<h3>Support &amp; Help </h3>
 					<li><a href="">Amazon Store</a></li>
 					<li><a href="">Shipping Policy</a></li>
 					<li><a href="">Return Policy</a></li>
 					<li><a href="">Warranty&amp;Support</a></li>
 					<li><a href="">Contact Us</a></li>
-					<li><a href="team.html">Our Team</a></li>
+                    <li><a href="team.html">Our Team</a></li>
 					<li><a href="">Track Your Order</a></li>
 					<li><a href="">Terms of Service</a></li>
 					<li><a href="">Refund Policy</a></li>
@@ -126,8 +132,8 @@
 				</ul>
 			</div>
 			<form action="" class="footer-container__form">
-				<label for="email">Email</label>
-				<input type="text" name="email" id="email" class="footer-container__text">
+				<label for="email" required >Email</label>
+				<input type="email" name="email" id="email" class="footer-container__text" required>
 				<input type="submit" value="Submit" class="footer-container__btn">
 			</form>
 			<p>&#169; 2021, Yunzii Mechanical Keyboards</p>

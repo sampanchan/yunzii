@@ -21,33 +21,36 @@
 				<img src="/dist/img/yunziiLogo.png" alt="Yunzii" class="logo">
 			</a>
 			<ul class="header-container__headerLinks">
-				<li><a href=""><i class="fas fa-search"></i></a></li>
-				<li><a href=""><i class="fas fa-user"></i></a></li>
-				<li><a href=""><i class="fas fa-shopping-bag"></i></a></li>
+				<li><a href="" aria-label="search"><i class="fas fa-search"></i></a></li>
+				<li><a href="" aria-label="account"><i class="fas fa-user"></i></a></li>
+				<li><a href="" aria-label="shopping-bag"><i class="fas fa-shopping-bag"></i></a></li>
 			</ul>
+			
 			<div class="header-menu">
-				<input type="checkbox" id="header-menu" /> 
-				<label for="header-menu" class="nike-menu">
-					<img src="dist/img/paw.png" alt="" class="paw-open">
-					<img src="dist/img/paws2.png" alt="" class="paw-close">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-				
+				<input type="checkbox" id="header-menu" />
+				<a href="" aria-label="hamburger-menu" class="hamburger-a">
+					
+
+					<label for="header-menu" class="nike-menu" aria-label="menu">
+						<img src="dist/img/paw.png" alt="" class="paw-open">
+						<img src="dist/img/paws2.png" alt="" class="paw-close">
+					</label>
+				</a>
 				<nav>
 					<ul>
-						<li><a href="#">Home</a></li>
+						
 						<li><a href="#">Keyboards</a></li>
 						<li><a href="#">Keycaps</a></li>
-						<li><a href="#">Keyboard Switches</a></li>
-						<li><a href="#">Keyboard Cables</a></li>
+						<li><a href="#">Switches</a></li>
+						<li><a href="#"> Cables</a></li>
 						<li><a href="#">Software</a></li>
 						<li><a href="login.html">Login</a></li>
+						<li><a href="team.html">Our Team</a></li>
 						
 					</ul>
 				</nav>	
 			</div>
+			
 		</header>
 		<main class="home-main">
 			<section class="hero-container">
@@ -57,12 +60,13 @@
 				
 			<button class="hero-container__btn" id="heroBtn" aria-label="Discover Yunzzi Macaron Keyboard">Discover Keyboard</button>
 			</section>
-			<section class="article-container">
-				<figure aria-label="keyboard">
+			<article class="article-container">
+				<figure>
 					<img src="/dist/img/keyboard8.jpg" alt="rainbow-84-key-r-g-b-hotswap-wired-mechanical-gaming-keyboard-with-p-b-t-shine-through-caps-rainbow-blue">
 					<figcaption>
 						<label for="Yunzii rainbow blue">yunzii blue rainbow keyboard</label>
 							<p>Pastel keycap design</p>
+							<p>Wired</p>
 							<p>84-key layout</p>
 							<p>19 RGB effects</p>
 							<p>Swappable mechanical keyboard</p>
@@ -70,9 +74,9 @@
 					</figcaption>
 				</figure>
 				<figure>
-					<img src="/dist/img/keyboard10.jpg" alt="k-c-84-s-graphite-blue-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
+					<img src="/dist/img/keyboard.jpg" alt="k-c-84-s-graphite-blue-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
 					<figcaption>
-						<label for="Yunzii rainbow blue">yunzii kc84s graphite blue keyboard</label>
+						<label for="Yunzii rainbow blue">yunzii graphite blue keyboard</label>
 							<p>Graphite keycap design</p>
 							<p>Wireless</p>
 							<p>84-key layout</p>
@@ -81,22 +85,23 @@
 							<input type="button" value="View Keyboard"> 
 					</figcaption>
 				</figure>
-			</section>
+			</article>
 			
 			<article class="category-container"> 
-				<h2 aria-label="what to shop">what to shop?</h2>
-			<div id="what to shop">
-					<button id="btn-left">Keyboard Cable</button>
-					<button>Keycaps</button>
-					<button id="btn-left">Wireless</button>
-					<button >Compact- 82 keys</button>
-					<button id="btn-left">Micro- 61 + Keys</button>
-					<button>Mini - 68 + Keys</button>
-				</div>
+				<!-- aria-describeby could be this too -->
+				<h2 aria-labelledby ="test">what to shop?</h2>
+					<div id="test">
+						<button id="btn-left">Keyboard Cable</button>
+						<button>Keycaps</button>
+						<button id="btn-left">Wireless</button>
+						<button >Compact- 82 keys</button>
+						<button id="btn-left">Micro- 61 + Keys</button>
+						<button>Mini - 68 + Keys</button>
+					</div>
 			</article>
 			<article class="trending-container">
-				<h2>Trending Keyboards</h2>
-				<div>
+				<h2 aria-labelledby ="Trending Keyboards">Trending Keyboards</h2>
+				<div for="Trending Keyboards">
 					<figure>
 						<img src="/dist/img/trending1.jpg" alt="k-c-84-s-milk-honey-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
 						<figcaption>
@@ -159,6 +164,7 @@
 		<footer class="footer-container">
 			<div class="footer-container__menuLinks">
 				<ul>
+					<h3>Menu</h3>
 					<li><a href="">Home</a></li>
 					<li><a href="">Keyboard</a></li>
 					<li><a href="">Keycaps</a></li>
@@ -169,13 +175,13 @@
 			</div>
 			<div class="footer-container__helpLinks">
 				<ul>
-					
+					<h3>Support &amp; Help </h3>
 					<li><a href="">Amazon Store</a></li>
 					<li><a href="">Shipping Policy</a></li>
 					<li><a href="">Return Policy</a></li>
 					<li><a href="">Warranty&amp;Support</a></li>
 					<li><a href="">Contact Us</a></li>
-					<li><a href="team.html">Our Team</a></li>
+                    <li><a href="team.html">Our Team</a></li>
 					<li><a href="">Track Your Order</a></li>
 					<li><a href="">Terms of Service</a></li>
 					<li><a href="">Refund Policy</a></li>
@@ -191,8 +197,8 @@
 				</ul>
 			</div>
 			<form action="" class="footer-container__form">
-				<label for="email">Email</label>
-				<input type="text" name="email" id="email" class="footer-container__text">
+				<label for="email" required >Email</label>
+				<input type="email" name="email" id="email" class="footer-container__text" required>
 				<input type="submit" value="Submit" class="footer-container__btn">
 			</form>
 			<p>&#169; 2021, Yunzii Mechanical Keyboards</p>

@@ -190,16 +190,41 @@ header .logo {
   width: 8em;
   margin-left: -1em;
 }
+@media screen and (min-width: 768px) {
+  header .logo {
+    width: 7em;
+  }
+}
 header .header-container__headerLinks {
   display: flex;
   margin: 1.7em 5em 0em 0em;
 }
+@media screen and (min-width: 768px) {
+  header .header-container__headerLinks {
+    margin: 1.7em 2em 1em 0em;
+  }
+}
 header .header-container__headerLinks li {
   margin-left: 1em;
+}
+@media screen and (min-width: 768px) {
+  header .header-container__headerLinks li {
+    margin-left: 1em;
+  }
 }
 header .header-container__headerLinks li a {
   color: #b7ccf2;
   font-size: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  header .header-container__headerLinks li a {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 992px) {
+  header .header-container__headerLinks li a {
+    font-size: 1.5em;
+  }
 }
 header .header-container__headerLinks li a:hover {
   color: #1d6883;
@@ -246,60 +271,34 @@ header .header-menu .nike-header-icon-container .icons {
 header .header-menu #header-menu {
   display: none;
 }
-header .header-menu label {
+header .header-menu .hamburger-a {
+  margin-top: 2em;
+}
+header .header-menu .hamburger-a label {
   margin-right: 1em;
   margin-top: 1.5em;
 }
-header .header-menu label img {
+@media screen and (min-width: 768px) {
+  header .header-menu .hamburger-a label {
+    display: none;
+  }
+}
+header .header-menu .hamburger-a label img {
   width: 2.5em;
 }
 @media screen and (min-width: 992px) {
-  header .header-menu label img {
+  header .header-menu .hamburger-a label img {
     display: none;
   }
 }
-header .header-menu label .paw-close {
+header .header-menu .hamburger-a label .paw-close {
   display: none;
-}
-header .header-menu label span {
-  cursor: pointer;
-  display: none;
-  width: 24px;
-  height: 4px;
-  background: #cceaf5;
-  position: relative;
-  -ms-transform-origin: center center;
-      transform-origin: center center;
-  transition: transform 250ms ease;
-  margin: 5px;
-}
-@media screen and (min-width: 992px) {
-  header .header-menu label span {
-    display: none;
-  }
 }
 header .header-menu #header-menu:checked ~ label .paw-open {
   display: none;
 }
 header .header-menu #header-menu:checked ~ label .paw-close {
   display: block;
-}
-header .header-menu #header-menu:checked ~ label span {
-  background: #1d6883;
-  display: none;
-}
-header .header-menu #header-menu:checked ~ label span:nth-of-type(1) {
-  top: 25%;
-  -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-}
-header .header-menu #header-menu:checked ~ label span:nth-of-type(2) {
-  right: 0%;
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-}
-header .header-menu #header-menu:checked ~ label span:nth-of-type(3) {
-  opacity: 0;
 }
 header .header-menu nav {
   background: #b7ccf2;
@@ -321,8 +320,6 @@ header .header-menu nav {
   header .header-menu nav {
     overflow: visible;
     top: 35%;
-    right: 100%;
-    width: 60vw;
   }
 }
 header .header-menu nav ul {
@@ -331,6 +328,14 @@ header .header-menu nav ul {
   margin-top: 2em;
   margin-left: 2em;
 }
+@media screen and (min-width: 768px) {
+  header .header-menu nav ul {
+    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 992px) {
   header .header-menu nav ul {
     display: flex;
@@ -338,11 +343,16 @@ header .header-menu nav ul {
     text-align: center;
     margin-top: 2em;
     align-items: center;
-    justify-content: normal;
+    justify-content: center;
   }
 }
 header .header-menu nav ul > li {
   margin-bottom: 2em;
+}
+@media screen and (min-width: 768px) {
+  header .header-menu nav ul > li {
+    margin-right: 0.8em;
+  }
 }
 header .header-menu nav ul > li a {
   color: black;
@@ -362,13 +372,13 @@ header .header-menu nav ul > li a:hover {
 }
 @media screen and (min-width: 768px) {
   header .header-menu nav ul > li a {
-    font-size: 1em;
-    margin-right: 1em;
+    font-size: 0.7em;
     color: #1d1c1e;
   }
 }
 @media screen and (min-width: 992px) {
   header .header-menu nav ul > li a {
+    font-size: 1.1em;
     margin-right: 2em;
   }
 }
@@ -382,6 +392,11 @@ header .header-menu #header-menu:checked ~ nav {
   -ms-grid-row-align: center;
   -ms-grid-column-align: center;
   place-self: center center;
+}
+@media screen and (min-width: 768px) {
+  .home-main {
+    margin: 1.5em;
+  }
 }
 .home-main .hero-container {
   background: url(/dist/img/keyboard1.jpg);
@@ -404,6 +419,13 @@ header .header-menu #header-menu:checked ~ nav {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 992px) {
+  .home-main .hero-container {
+    width: 97vw;
+    height: 60vh;
+    align-items: flex-start;
+  }
+}
 .home-main .hero-container:focus {
   -ms-transform: scale(1.2);
       transform: scale(1.2);
@@ -415,18 +437,29 @@ header .header-menu #header-menu:checked ~ nav {
   margin-bottom: 1em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 992px) {
+  .home-main .hero-container label {
+    margin-left: 1.5em;
+  }
+}
 .home-main .hero-container__btn {
   cursor: pointer;
   color: white;
   background: #1d6883;
   border: none;
   padding: 0.5em;
+  margin-top: 2em;
   font-size: 1.5em;
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 }
 .home-main .hero-container__btn:hover {
-  box-shadow: rgba(243, 173, 234, 0.68) 0px 5px 13px 2px;
+  box-shadow: rgba(33, 150, 243, 0.68) 0px 5px 13px 2px;
+}
+@media screen and (min-width: 992px) {
+  .home-main .hero-container__btn {
+    margin-left: 2.5em;
+  }
 }
 .home-main .article-container {
   margin: unset;
@@ -438,13 +471,25 @@ header .header-menu #header-menu:checked ~ nav {
   .home-main .article-container {
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
 }
-.home-main .article-container figure :nth-of-type(1) {
+.home-main .article-container figure {
   margin-top: 1em;
+}
+@media screen and (min-width: 768px) {
+  .home-main .article-container figure {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home-main .article-container figure {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 .home-main .article-container figure img {
   width: 94vw;
@@ -456,8 +501,18 @@ header .header-menu #header-menu:checked ~ nav {
     width: 40vw;
   }
 }
+@media screen and (min-width: 992px) {
+  .home-main .article-container figure img {
+    width: 25vw;
+  }
+}
 .home-main .article-container figure figcaption {
   text-align: center;
+}
+@media screen and (min-width: 992px) {
+  .home-main .article-container figure figcaption {
+    margin-left: 3.5em;
+  }
 }
 .home-main .article-container figure figcaption label {
   margin-top: 1em;
@@ -494,7 +549,7 @@ header .header-menu #header-menu:checked ~ nav {
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: 700;
-  color: white;
+  color: #303030;
 }
 .home-main .category-container div {
   display: -ms-grid;
@@ -592,6 +647,7 @@ header .header-menu #header-menu:checked ~ nav {
   border-radius: 0.5em;
   color: white;
   font-size: 1.2em;
+  font-weight: bold;
 }
 .home-main .category-container div button:hover {
   background-blend-mode: multiply;
@@ -599,7 +655,8 @@ header .header-menu #header-menu:checked ~ nav {
 }
 @media screen and (min-width: 992px) {
   .home-main .category-container div button {
-    height: 50vh;
+    height: 25vh;
+    font-size: 1.5em;
   }
 }
 .home-main .trending-container {
@@ -670,7 +727,7 @@ header .header-menu #header-menu:checked ~ nav {
   font-size: 1em;
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .home-main .trending-container div figure figcaption input:hover {
   background: #64f0bf;
@@ -684,6 +741,7 @@ header .header-menu #header-menu:checked ~ nav {
   background-repeat: no-repeat;
   display: flex;
   flex-grow: 1;
+  justify-content: center;
 }
 .login-main h1 {
   font-weight: 900;
@@ -706,6 +764,11 @@ header .header-menu #header-menu:checked ~ nav {
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 }
+@media screen and (min-width: 992px) {
+  .login-main form {
+    width: 50vw;
+  }
+}
 .login-main form label {
   margin-top: 0.5em;
   font-size: 1em;
@@ -720,9 +783,24 @@ header .header-menu #header-menu:checked ~ nav {
   border: none;
   background: #b7ccf2;
   padding: 0.4em;
-  width: 25%;
+  width: 35%;
   margin-top: 1em;
   font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.login-main form .submit:hover, .login-main form button:hover {
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .login-main form .submit, .login-main form button {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .login-main form .submit, .login-main form button {
+    width: 15%;
+  }
 }
 .login-main form a {
   text-decoration: none;
@@ -733,6 +811,15 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .login-main form a:hover {
   color: #f6cdd6;
+}
+.login-main form .create-a {
+  background: #f6cdd6;
+  padding: 1em;
+  border-radius: 0.5em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+}
+.login-main form .create-a:hover {
+  color: white;
 }
 .login-main form button {
   background: #f6cdd6;
@@ -746,12 +833,22 @@ header .header-menu #header-menu:checked ~ nav {
 .team-banner {
   background-image: url(/dist/img/banner.jpg);
   width: 100vw;
-  height: 70vw;
+  height: 40vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .team-banner {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-banner {
+    height: 80vh;
+  }
 }
 .team-banner label {
   color: #6f5fac;
@@ -761,6 +858,11 @@ header .header-menu #header-menu:checked ~ nav {
   bottom: 0;
   left: 50%;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .team-banner label {
+    font-size: 3.5em;
+  }
 }
 
 .team-main {
@@ -786,23 +888,33 @@ header .header-menu #header-menu:checked ~ nav {
 .team-main__teamSection article {
   text-align: left;
 }
-.team-main__teamSection figure {
+@media screen and (min-width: 992px) {
+  .team-main__teamSection div {
+    display: flex;
+  }
+}
+.team-main__teamSection div figure {
   margin-top: 2em;
   text-align: center;
 }
-.team-main__teamSection figure img {
+.team-main__teamSection div figure img {
   width: 75%;
   border-radius: 50%;
   border: solid 0.2em;
   border-color: #b7ccf2;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.team-main__teamSection figure figcaption {
+@media screen and (min-width: 768px) {
+  .team-main__teamSection div figure img {
+    width: 50%;
+  }
+}
+.team-main__teamSection div figure figcaption {
   color: #6f5fac;
   font-size: 1.5em;
   font-weight: 700;
 }
-.team-main__teamSection figure figcaption span {
+.team-main__teamSection div figure figcaption span {
   color: white;
   font-size: 0.75em;
 }
@@ -819,11 +931,19 @@ header .header-menu #header-menu:checked ~ nav {
     flex-direction: row;
   }
 }
+.footer-container__menuLinks h3, .footer-container__helpLinks h3 {
+  font-weight: bold;
+}
 .footer-container__menuLinks ul, .footer-container__helpLinks ul {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 2em;
+}
+@media screen and (min-width: 992px) {
+  .footer-container__menuLinks ul, .footer-container__helpLinks ul {
+    align-items: flex-start;
+  }
 }
 .footer-container__menuLinks ul li, .footer-container__helpLinks ul li {
   margin: 0.5em;
@@ -836,6 +956,9 @@ header .header-menu #header-menu:checked ~ nav {
   color: #b7ccf2;
   transition: ease-in-out 0.25s;
 }
+.footer-container__socials {
+  margin: 1em;
+}
 .footer-container__socials ul {
   display: flex;
   flex-direction: row;
@@ -846,6 +969,7 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .footer-container__socials ul li a {
   color: #b7ccf2;
+  font-size: 1em;
 }
 .footer-container__socials ul li a:hover {
   color: #1d6883;
@@ -859,6 +983,12 @@ header .header-menu #header-menu:checked ~ nav {
   font-weight: 500;
   margin-top: 1em;
   margin-bottom: 1em;
+}
+@media screen and (min-width: 992px) {
+  .footer-container__form {
+    align-items: flex-start;
+    margin: 1em;
+  }
 }
 .footer-container__form label {
   margin-bottom: 0.5em;

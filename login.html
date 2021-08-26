@@ -21,46 +21,49 @@
 				<img src="/dist/img/yunziiLogo.png" alt="Yunzii" class="logo">
 			</a>
 			<ul class="header-container__headerLinks">
-				<li><a href=""><i class="fas fa-search"></i></a></li>
-				<li><a href=""><i class="fas fa-user"></i></a></li>
-				<li><a href=""><i class="fas fa-shopping-bag"></i></a></li>
+				<li><a href="" aria-label="search"><i class="fas fa-search"></i></a></li>
+				<li><a href="" aria-label="account"><i class="fas fa-user"></i></a></li>
+				<li><a href="" aria-label="shopping-bag"><i class="fas fa-shopping-bag"></i></a></li>
 			</ul>
+			
 			<div class="header-menu">
-				<input type="checkbox" id="header-menu" /> 
-				<label for="header-menu" class="nike-menu">
-					<img src="dist/img/paw.png" alt="" class="paw-open">
-					<img src="dist/img/paws2.png" alt="" class="paw-close">
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
-				
+				<input type="checkbox" id="header-menu" />
+				<a href="" aria-label="hamburger-menu" class="hamburger-a">
+					
+
+					<label for="header-menu" class="nike-menu" aria-label="menu">
+						<img src="dist/img/paw.png" alt="" class="paw-open">
+						<img src="dist/img/paws2.png" alt="" class="paw-close">
+					</label>
+				</a>
 				<nav>
 					<ul>
-						<li><a href="#">Home</a></li>
+						
 						<li><a href="#">Keyboards</a></li>
 						<li><a href="#">Keycaps</a></li>
-						<li><a href="#">Keyboard Switches</a></li>
-						<li><a href="#">Keyboard Cables</a></li>
+						<li><a href="#">Switches</a></li>
+						<li><a href="#"> Cables</a></li>
 						<li><a href="#">Software</a></li>
-						<li><a href="#">Login</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="team.html">Our Team</a></li>
 						
 					</ul>
 				</nav>	
 			</div>
+			
 		</header>
 		<main class="login-main">
             
-            <form action="login">
-                <h1>Login</h1>
+            <form>
+                <h1 arialabelled-by="Login Section">Login</h1>
                 <label for="email">Email</label>
-                <input for="text" id="email" name="email" class="text"></input>
+                <input for="text" id="email" name="email" class="text" required></input>
                 <label for="password">Password</label>
-                <input for="text" id="password" name="password" class="text"></input>
+                <input for="text" id="password" name="password" class="text" required></input>
                 <input type="submit" value="Sign In" class="submit" >
-                <a href="X">Forgot password?</a>
+                <a href="#">Forgot password?</a>
                 
-                 <a href="#">Create account</a>
+                 <a href="#" class="create-a">Create account</a>
             </form>
             
         </main>
@@ -68,6 +71,7 @@
 		<footer class="footer-container">
 			<div class="footer-container__menuLinks">
 				<ul>
+					<h3>Menu</h3>
 					<li><a href="">Home</a></li>
 					<li><a href="">Keyboard</a></li>
 					<li><a href="">Keycaps</a></li>
@@ -78,7 +82,7 @@
 			</div>
 			<div class="footer-container__helpLinks">
 				<ul>
-					
+					<h3>Support &amp; Help </h3>
 					<li><a href="">Amazon Store</a></li>
 					<li><a href="">Shipping Policy</a></li>
 					<li><a href="">Return Policy</a></li>
@@ -100,8 +104,8 @@
 				</ul>
 			</div>
 			<form action="" class="footer-container__form">
-				<label for="email">Email</label>
-				<input type="text" name="email" id="email" class="footer-container__text">
+				<label for="email" required >Email</label>
+				<input type="email" name="email" id="email" class="footer-container__text" required>
 				<input type="submit" value="Submit" class="footer-container__btn">
 			</form>
 			<p>&#169; 2021, Yunzii Mechanical Keyboards</p>
