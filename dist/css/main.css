@@ -187,13 +187,13 @@ div.loading {
 }
 div.loading img {
   position: absolute;
-  top: 25%;
-  left: 20%;
+  top: 40%;
+  left: 25%;
 }
 @media screen and (min-width: 768px) {
   div.loading img {
-    top: 30%;
-    left: 20%;
+    top: 35%;
+    left: 35%;
   }
 }
 @media screen and (min-width: 992px) {

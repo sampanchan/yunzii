@@ -55,11 +55,11 @@ div.loading {
 	transition: 2s;
 	img{
 		position: absolute;
-		top:25%;
-		left:20%;
+		top:40%;
+		left:25%;
 		@include mixins.bp-medium{
-			top:30%;
-			left:20%;
+			top:35%;
+			left:35%;
 		}
 		@include mixins.bp-large{
 			
