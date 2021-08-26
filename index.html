@@ -15,7 +15,9 @@
 		
 	</head>
 
-	<body>
+	<body role="#" aria-labelledby="stc">
+		<a class="main-content-link" href="#main" id="stc">Skip To Main Content</a>
+		<div class="loading"> <img src="/dist/img/yunziiLogo.png" alt="yunzii loading logo"> </div>
 		<header class="header-container">
 			<a class="header-container__link" href="index.html" id="home-link">
 				<img src="/dist/img/yunziiLogo.png" alt="Yunzii" class="logo">
@@ -52,17 +54,16 @@
 			</div>
 			
 		</header>
-		<main class="home-main">
+		<main class="home-main" id="main">
 			<section class="hero-container">
 				<div class="hero-container__hero">
 					<label for="heroBtn" class="hero-container__label">Yunzii Keyboard</label>	
 				</div>
-				
-			<button class="hero-container__btn" id="heroBtn" aria-label="Discover Yunzzi Macaron Keyboard">Discover Keyboard</button>
+				<button class="hero-container__btn" id="heroBtn" aria-label="Discover Yunzzi Macaron Keyboard">Discover Keyboard</button>
 			</section>
-			<article class="article-container">
-				<figure>
-					<img src="/dist/img/keyboard8.jpg" alt="rainbow-84-key-r-g-b-hotswap-wired-mechanical-gaming-keyboard-with-p-b-t-shine-through-caps-rainbow-blue">
+			<article class="article-container" role="#" aria-labelledby="ac" id="main">
+				<figure id ="ac">
+					<img src="/dist/img/keyboard8.jpg" alt="blue-rainbow-keyboard">
 					<figcaption>
 						<label for="Yunzii rainbow blue">yunzii blue rainbow keyboard</label>
 							<p>Pastel keycap design</p>
@@ -73,7 +74,7 @@
 							<input type="button" value="View Keyboard"> 
 					</figcaption>
 				</figure>
-				<figure>
+				<figure id ="ac">
 					<img src="/dist/img/keyboard.jpg" alt="k-c-84-s-graphite-blue-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
 					<figcaption>
 						<label for="Yunzii rainbow blue">yunzii graphite blue keyboard</label>
@@ -87,9 +88,9 @@
 				</figure>
 			</article>
 			
-			<article class="category-container"> 
+			<article class="category-container" role="#" aria-labelledby="wts"> 
 				<!-- aria-describeby could be this too -->
-				<h2 aria-labelledby ="test">what to shop?</h2>
+				<h2 id ="wts">what to shop?</h2>
 					<div id="test">
 						<button id="btn-left">Keyboard Cable</button>
 						<button>Keycaps</button>
@@ -99,25 +100,25 @@
 						<button>Mini - 68 + Keys</button>
 					</div>
 			</article>
-			<article class="trending-container">
-				<h2 aria-labelledby ="Trending Keyboards">Trending Keyboards</h2>
-				<div for="Trending Keyboards">
-					<figure>
-						<img src="/dist/img/trending1.jpg" alt="k-c-84-s-milk-honey-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
+			<article class="trending-container" role="#" aria-labelledby="tk">
+				<h2 id ="tk">Trending Keyboards</h2>
+				<div for="Trending Keyboards" role="#" id="figure">
+					<figure id="one" aria-labelledby="figure one">
+						<img src="/dist/img/trending1.jpg" alt="white-keyboard-with-yellow-caps">
 						<figcaption>
-							<label for="milkHoney">yunzii milk honey keyboard</label>
+							<label for="milk" >yunzii milk honey keyboard</label>
 								<p>$95 USD</p>
 								<p>$105 USD</p>
-								<input type="button" value="Buy" id="milkHoney"> 
+							<input type="button" value="Buy" id="milk" >
 						</figcaption>
 					</figure>
-					<figure>
-						<img src="/dist/img/trending2.jpg" alt="k-c-84-s-p-red-84-front-craved-keys-hotswap-wireled-mechanical-keyboard">
+					<figure id ="figure">
+						<img src="/dist/img/trending2.jpg" alt="black-cream-and-red-keyboard">
 						<figcaption>
-							<label for="SP-Red">yunzii SP-Red 84 keyboard</label>
+							<label for="red" >yunzii SP-Red 84 keyboard</label>
 								<p>$95 USD</p>
 								<p>$105 USD</p>
-								<input type="button" value="Buy" id="SP-Red"> 
+								<input type="button" value="Buy" id="red" > 
 						</figcaption>
 					</figure>
 					<figure>
@@ -190,10 +191,10 @@
 			</div>
 			<div class="footer-container__socials">
 				<ul >
-					<li><a href=""><i class="fab fa-twitter"></i></a></li>
-					<li><a href=""><i class="fab fa-tiktok"></i></a></li>
-					<li><a href=""><i class="fab fa-instagram"></i></a></li>
-					<li><a href=""><i class="fab fa-youtube"></i></a></li>
+					<li><a href="" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="" aria-label="tiktok"><i class="fab fa-tiktok"></i></a></li>
+					<li><a href="" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
 				</ul>
 			</div>
 			<form action="" class="footer-container__form">

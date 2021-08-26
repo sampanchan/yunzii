@@ -44,7 +44,57 @@ body {
 	background-color: #ffcdff;
 }
 /* 2. Content ================================= */
+div.loading {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	background-color: white;;
+	pointer-events: none;
+	z-index: 1000;
+	opacity: 1;;
+	transition: 2s;
+	img{
+		position: absolute;
+		top:25%;
+		left:20%;
+		@include mixins.bp-medium{
+			top:30%;
+			left:20%;
+		}
+		@include mixins.bp-large{
+			
+			left:40%;
+		}
+	}
 
+
+	&.hide {
+		opacity: 0;;
+		
+	}
+}
+.main-content-link{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	background-color: black;
+	padding: .5em;
+	border-radius: 5px;
+	margin-top: 1em;
+	font-size: 10px;
+	position: absolute;
+	top:-1%;
+	left:1%;
+	opacity: 0;
+	transition: .5s;
+	z-index: 99;
+	&:hover{
+		background: variables.$soft;
+		color: white;
+		opacity: 100;
+
+	}
+}
 header{
 	background: white;
 	width: 100%;
