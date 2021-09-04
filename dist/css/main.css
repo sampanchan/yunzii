@@ -1159,6 +1159,7 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .footer-container p {
   text-align: center;
+  padding-bottom: 3em;
 }
 
 /* 3. Animations ================================= */

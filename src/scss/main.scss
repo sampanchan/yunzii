@@ -333,7 +333,7 @@ header{
 	
 }
 .home-main{
-	margin: 1em;
+	margin: variables.$margin;
 	place-self: center center;
 	@include mixins.bp-medium{
 		margin: 1.5em;
@@ -374,7 +374,7 @@ header{
 			color: rgb(60, 60, 60);
 			font-weight: 800;
 			font-size: 2.5em;
-			margin-bottom: 1em;
+			margin-bottom: variables.$margin;
 			text-transform: uppercase;
 			@include mixins.bp-large{
 				margin-left: 1.5em;
@@ -434,7 +434,7 @@ header{
 				img{
 					width: 94vw;
 					border-radius: .5em;
-					margin-bottom:1em;
+					margin-bottom:variables.$margin;
 					@include mixins.bp-medium{
 						width: 40vw;
 					}
@@ -448,7 +448,7 @@ header{
 						margin-left:2em;
 					}
 					label{
-						margin-top:1em;
+						margin-top:variables.$margin;
 						text-transform: uppercase;
 						color: black;
 						font-weight: 700;
@@ -459,19 +459,17 @@ header{
 				ul{
 					text-align: center;
 					li{
-						margin-top:1em;
+						margin-top:variables.$margin;
 					}
 				}
 				
 				input{
-					// text-align: center;
 					margin-top:1em;
-					// margin: 0 auto;
 					color:white;
 					background: variables.$darkBlue;
 					border:none;
 					padding:.5em;
-					font-size: 1em;
+					font-size: variables.$margin;
 					border-radius: .5em;
 					box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 					transition: .5s ease-in-out;
@@ -485,15 +483,11 @@ header{
 	}
 	.category-container{
 		margin-bottom: variables.$marginLarge;
-		// background: white;
-		// width: 94vw;
 		border-radius: .5em;
-
-		// margin: unset;
 		h2{
 			text-align: center;
 			padding: 1em;
-			margin-top: 1em;
+			margin-top: variables.$margin;
 			font-size: 1.5em;
 			text-transform: uppercase;
 			font-weight: 700;
@@ -586,7 +580,7 @@ header{
 		h2{
 			text-align: center;
 			padding: 1em;
-			margin-top: 1em;
+			margin-top: variables.$margin;
 			font-size: 1.5em;
 			text-transform: uppercase;
 			font-weight: 700;
@@ -695,7 +689,6 @@ header{
 .login-main{
 
 	position: relative;
-	// background-image: url(/dist/img/ok-computer-dribbble.gif);
 	width: 100vw;
 	height: 100vh;
 	background-repeat: no-repeat;
@@ -712,12 +705,6 @@ header{
 		font-size: 3em;
 		text-align: center;
 		margin-bottom: 1em;
-		// margin-top: -3em;
-		// position: absolute;
-		// top:-5%;
-
-
-
 	}
 	form{
 		background:white;
@@ -738,13 +725,13 @@ header{
 		
 		label{
 			margin-top: .5em;
-			font-size: 1em;
+			font-size: variables.$margin;
 		}
 		.text{
 			border: none;
 			background:rgb(222, 222, 222);
-			margin-top: 1em;
-			font-size: 1em;
+			margin-top: variables.$margin;
+			font-size: variables.$margin;
 			padding: .5em;
 		}
 		.submit, button{
@@ -752,8 +739,8 @@ header{
 			background: variables.$soft;
 			padding: .4em;
 			width: 35%;
-			margin-top: 1em;
-			font-size: 1em;
+			margin-top: variables.$margin;
+			font-size: variables.$margin;
 			cursor: pointer;
 			transition: .3s ease-in-out;
 			&:hover{
@@ -771,8 +758,8 @@ header{
 			text-decoration: none;
 			color: black;
 			transition: .3s ease-in-out;
-			margin: 1em;
-			font-size: 1em;
+			margin: variables.$margin;
+			font-size: variables.$margin;
 			&:hover{
 				color:#f6cdd6;
 
@@ -954,7 +941,7 @@ header{
 	}
 	
 	&__socials{
-		margin:1em;
+		margin:variables.$margin;
 		ul{
 			display: flex;
 			flex-direction: row;
@@ -979,8 +966,8 @@ header{
     	flex-direction: row;
     	align-items: baseline;
     	font-weight: 500;
-    	margin-top: 1em;
-    	margin-bottom: 1em;
+    	margin-top: variables.$margin;
+    	margin-bottom: variables.$margin;
     	align-content: stretch;
     	justify-content: center;
 		@include mixins.bp-large{
@@ -1005,7 +992,7 @@ header{
 			cursor: pointer;
 			border: none;
 			font-size: 1em;
-			margin-top:1em;
+			margin-top:variables.$margin;
 			padding: .5em;
 			border-radius: .2em;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 10px;
@@ -1026,6 +1013,8 @@ header{
 	}
 	p{
 		text-align: center;
+		
+		padding-bottom: variables.$marginLarge;
 		
 	}
 }
@@ -1049,8 +1038,5 @@ header{
 	}
 }
 
-// .active{
-// 	transform: translateX(100px);
-// 	transition: translateX(100px).5s ease-in;
-// }
+
 
