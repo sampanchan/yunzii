@@ -189,39 +189,49 @@ header{
 		}
 		
 		#header-menu{
-			display: none;
+			// display: none;
+			opacity: 0;
+			position: absolute;
+    		top: 50%;
+    		right: 30%;
 		}
-		.hamburger-a{
-			margin-top:2em;
-			label {
-				margin-right: 1em;
-				margin-top: 1.5em;
-				@include mixins.bp-medium{
-					display:none;
-				}
-					
+		label {
+			margin-right: 1em;
+			margin-top: 1.5em;
+			&:focus{
+				outline: blue 2px solid;
+			}
+			@include mixins.bp-medium{
+				display:none;
+			}
 				
-				img{
-					width: 2.5em;
-					animation-name: key-cap;
-					animation-duration: .5s;
-					animation-iteration-count: infinite;
-					@include mixins.bp-large{
-						display: none;
-					}
-					
-				}
-				.paw-close{
+			
+			img{
+				margin-top: .5em;
+				width: 2.5em;
+				animation-name: key-cap;
+				animation-duration: 3s;
+				animation-iteration-count: infinite;
+				@include mixins.bp-large{
 					display: none;
 				}
+				
 			}
-			
+			.paw-close{
+				display: none;
+			}
 		}
+		// .hamburger-a{
+		// 	margin-top:2em;
+		
+			
+		// }
 			
 		
 		#header-menu:checked ~ label {
 			.paw-open{
 				display: none;
+				
 			}
 			.paw-close{
 				display: block;
@@ -240,13 +250,16 @@ header{
 			width: 100vw;
 			z-index: -1;
 			height: 0vh;
+			visibility: hidden;
 			transition:  .5s;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 			overflow: hidden;
 			
 			@include mixins.bp-medium{
 				overflow: visible;
-				top: 35%;
+				visibility: visible;
+				margin-top: variables.$margin;
+				
 			}
 
 			ul{
@@ -255,18 +268,22 @@ header{
 				margin-top: 2em;
 				margin-left: 2em;
 				@include mixins.bp-medium{
-					display:none;
+					// display:none;
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
 				}
 				@include mixins.bp-large{
-					display: flex;
-    				flex-direction: row;
-					text-align: center;
-					margin-top: 2em;
-					align-items: center;
-					justify-content: center;
+					// display: flex;
+    				// flex-direction: row;
+					// text-align: center;
+					// margin-top: 2em;
+					// align-items: center;
+					// justify-content: center;
+					// display: unset;
+					max-width: max-content;
+					margin: 2em auto;
+
 					
 
 				}
@@ -297,7 +314,7 @@ header{
 							
 						}
 						@include mixins.bp-large{
-							font-size: 1.1em;
+							font-size: 1em;
 							margin-right: 2em;
 						}
 					}
@@ -307,6 +324,7 @@ header{
 		#header-menu:checked ~ nav {
 			display: block;
 			height: 50vh;
+			visibility: visible;
 		}
 	}
 
@@ -325,6 +343,7 @@ header{
 		background:url(/dist/img/keyboard1.jpg);
 		width: 94vw;
 		height: 80vh;
+		margin-top:variables.$margin;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -383,7 +402,7 @@ header{
 	}
 	.article-container{
 		margin: unset;
-		margin-top: 1em;
+		margin-top:variables.$marginLarge;
 		display: flex;
 		flex-direction: column;
 		@include mixins.bp-medium{
@@ -393,52 +412,61 @@ header{
 			align-items: center;
 		}
 		
-		figure{
-			margin-top: 1em;
-			// opacity: 0;
-			transition: 1s ease-in-out;
-			&.active{
-				opacity: 1;
-			}
-			
-			@include mixins.bp-medium{
-				text-align: center;
-			}
-			@include mixins.bp-large{
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: space-around;
-			}
-			
-			img{
-				width: 94vw;
-				border-radius: .5em;
-				margin-bottom:1em;
+		div{
+			figure{
+				margin-bottom: variables.$marginLarge;
+				opacity: 0;
+				transition: 1s ease-in-out;
+				&.active{
+					opacity: 1;
+				}
+				
 				@include mixins.bp-medium{
-					width: 40vw;
+					text-align: center;
 				}
 				@include mixins.bp-large{
-					width: 25vw;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-around;
 				}
-			}
-			figcaption{
-				text-align: center;
-				@include mixins.bp-large{
-					margin-left:2em;
+				
+				img{
+					width: 94vw;
+					border-radius: .5em;
+					margin-bottom:1em;
+					@include mixins.bp-medium{
+						width: 40vw;
+					}
+					@include mixins.bp-large{
+						width: 25vw;
+					}
 				}
-				label{
-					margin-top:1em;
-					text-transform: uppercase;
-					color: black;
-					font-weight: 700;
-					font-size: 1.3em;
+				figcaption{
+					text-align: center;
+					@include mixins.bp-large{
+						margin-left:2em;
+					}
+					label{
+						margin-top:1em;
+						text-transform: uppercase;
+						color: black;
+						font-weight: 700;
+						font-size: 1.3em;
+					}
+					
 				}
-				p{
-					margin-top:1em;
+				ul{
+					text-align: center;
+					li{
+						margin-top:1em;
+					}
 				}
+				
 				input{
+					// text-align: center;
 					margin-top:1em;
+					// margin: 0 auto;
 					color:white;
 					background: variables.$darkBlue;
 					border:none;
@@ -453,11 +481,14 @@ header{
 				}
 			}
 		}
+		
 	}
 	.category-container{
+		margin-bottom: variables.$marginLarge;
 		// background: white;
-		width: 94vw;
+		// width: 94vw;
 		border-radius: .5em;
+
 		// margin: unset;
 		h2{
 			text-align: center;
@@ -528,12 +559,27 @@ header{
 			
 	
 			}
+			#btn1, #btn3, #btn5{
+				transform: translateX(-13em);
+				transition: 2s ease-in-out;
+				&.active{
+					transform: translateX(0em);
+				}
+			}
+			#btn2, #btn4, #btn6{
+				transform: translateX(13em);
+				transition: 2s ease-in-out;
+				&.active{
+					transform: translateX(0em);
+				}
+			}
 		}
 		
 	}
 	.trending-container{
 		background:white;
-		margin:0;
+		// margin:0;
+		margin-bottom: variables.$marginLarge;
 		border-radius: .5em;
 		text-align: center;
 		padding-bottom: 1em;
@@ -546,7 +592,7 @@ header{
 			font-weight: 700;
 			color: variables.$darkBlue;
 		}
-		div{
+		.tc-parent-div{
 			
 			@include mixins.bp-medium{
 				display: flex;
@@ -555,58 +601,92 @@ header{
 				align-items: baseline;
 			}
 			
-
-			figure{
-				margin-bottom: 1em;
-				img{
-					width: 70vw;
-					margin-bottom:1em;
-					@include mixins.bp-medium{
-						width: 45vw;
-					}
-					@include mixins.bp-large{
-						width: 30vw;
+			div{
+				margin: .5em;
+				
+				a{
+					text-decoration: none;
+					color: black;
+					figure{
+						margin-bottom: variables.$marginLarge;
+						
+						img{
+							width: 70vw;
+							margin-bottom:1em;
+							@include mixins.bp-medium{
+								width: 45vw;
+							}
+							@include mixins.bp-large{
+								width: 30vw;
+							}
+						}
+						figcaption{
+							
+							label{
+								margin-top:1em;
+								text-transform: uppercase;
+								color: black;
+								font-weight: 700;
+								font-size: 1.3em;
+								
+							}
+							:nth-child(2){
+								color: red;
+								font-weight: bold;
+							}
+							:nth-child(3){
+								text-decoration: line-through;
+							}
+							p{
+								margin-top:1em;
+							
+							}
+							
+						}
+						
+						
+						
 					}
 				}
-				figcaption{
-					:nth-child(2){
-						color: red;
-						font-weight: bold;
-					}
-					:nth-child(3){
-						text-decoration: line-through;
-					}
-					label{
-						margin-top:1em;
-						text-transform: uppercase;
-						color: black;
-						font-weight: 700;
-						font-size: 1.3em;
-						
-					}
-					p{
-						margin-top:1em;
+				
+				input{
+					// margin-top:em;
+					margin-bottom: variables.$marginLarge;
+					color:black;
+					background: variables.$soft;
+					border:none;
+					padding:.5em;
+					width: 5em;
+					font-size: 1em;
+					border-radius: .5em;
+					box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
+					transition: .2s ease-in-out;
 					
-					}
-					input{
-						margin-top:1em;
-						color:black;
-						background: variables.$soft;
-						border:none;
-						padding:.5em;
-						width: 5em;
-						font-size: 1em;
-						border-radius: .5em;
-						box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
-						transition: .2s ease-in-out;
-						
-						&:hover{
-							background: variables.$green;
-							box-shadow: rgb(14 50 62 / 51%) 0px 5px 13px 2px;
-						}
+					&:hover{
+						background: variables.$green;
+						box-shadow: rgb(14 50 62 / 51%) 0px 5px 13px 2px;
 					}
 				}
 			}
+			#img1, #img3, #img5{
+				opacity: 0;
+				transform: translateX(-30em);
+				transition: 2s ease-in-out;
+				&.active{
+					opacity: 1;
+					transform: translateX(0em);
+				}
+			}
+			#img2, #img4, #img6{
+				opacity: 0;
+				transform: translateX(30em);
+				transition: 2s ease-in-out;
+				&.active{
+					opacity: 1;
+					transform: translateX(0em);
+				}
+			}
+			
 		}
 		
 	}
@@ -617,11 +697,14 @@ header{
 	position: relative;
 	// background-image: url(/dist/img/ok-computer-dribbble.gif);
 	width: 100vw;
-	height: 70vh;
+	height: 100vh;
 	background-repeat: no-repeat;
 	display: flex;
 	flex-grow:1 ;
 	justify-content: center;
+	@include mixins.bp-medium{
+		height: unset;
+	}
 	
 	h1{
 		font-weight: 900;
@@ -662,6 +745,7 @@ header{
 			background:rgb(222, 222, 222);
 			margin-top: 1em;
 			font-size: 1em;
+			padding: .5em;
 		}
 		.submit, button{
 			border: none;
@@ -736,7 +820,7 @@ header{
 		
 	
 		
-		label{
+		h1{
 			
 			color: #6f5fac;
 			font-weight: 800;
@@ -756,15 +840,13 @@ header{
 .team-main{
 	background:#ffcdff;
 	
-	
-	
 	&__aboutSection, &__teamSection{
-		color:#6f5fac;
+		color:#524780;
 		line-height: 2em;
 		padding:1em;
 		margin-top: 2em;
 		
-		h1{
+		h2{
 			color: #ffffff;
 				font-weight: 800;
 				font-size: 2em;
@@ -789,6 +871,8 @@ header{
 				margin-top:2em;
 				text-align:  center;
 				
+				
+				
 					
 				
 				img{
@@ -803,7 +887,7 @@ header{
 					
 				}
 				figcaption{
-					color: #6f5fac;
+					color: #524780;
 					font-size: 1.5em;
 					font-weight: 700;
 					span{
@@ -812,6 +896,8 @@ header{
 					}
 				}
 			}
+			
+			
 		}
 		
 	}
@@ -882,12 +968,13 @@ header{
 	}
 	&__form{
 		display: flex;
-		flex-direction: column;
-		align-content: space-around;
-		align-items: center;
-		font-weight: 500 ;
-		margin-top:1em;
-		margin-bottom:1em;
+    	flex-direction: row;
+    	align-items: baseline;
+    	font-weight: 500;
+    	margin-top: 1em;
+    	margin-bottom: 1em;
+    	align-content: stretch;
+    	justify-content: center;
 		@include mixins.bp-large{
 			align-items: flex-start;
 			margin:1em;
@@ -895,6 +982,7 @@ header{
 		
 		label{
 			margin-bottom:.5em;
+			margin-right:variables.$margin;
 		}
 		.footer-container__text{
 			border:none;
@@ -904,6 +992,7 @@ header{
 		}
 		.footer-container__btn{
 			background: variables.$background;
+			margin-left:variables.$margin;
 			color: white;
 			cursor: pointer;
 			border: none;
@@ -912,11 +1001,19 @@ header{
 			padding: .5em;
 			border-radius: .2em;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 10px;
+			
+
 			&:hover{
 				background: rgb(29, 104, 131);
 				transition: ease-in-out .25s;
 				
 			}
+			@include mixins.bp-large{
+				margin-top: -.2em;
+			}
+		}
+		#btn1{
+			transform: translateX(-13em);
 		}
 	}
 	p{

@@ -29,14 +29,10 @@
 			
 			<div class="header-menu">
 				<input type="checkbox" id="header-menu" />
-				<a href="" aria-label="hamburger-menu" class="hamburger-a">
-					
-
-					<label for="header-menu" class="nike-menu" aria-label="menu">
-						<img src="dist/img/paw.png" alt="" class="paw-open">
-						<img src="dist/img/paws2.png" alt="" class="paw-close">
-					</label>
-				</a>
+				<label for="header-menu" class="nike-menu" aria-label="menu" tabindex="0">
+					<img src="dist/img/paw.png" alt="" class="paw-open">
+					<img src="dist/img/paws2.png" alt="" class="paw-close">
+				</label>
 				<nav>
 					<ul>
 						
@@ -56,21 +52,24 @@
 		<main class="login-main">
             
             <form role="#" aria-labelledby="form">
+				<!-- make input fields larger in css:padding -->
                 <h1 id="form">Login</h1>
                 <label for="email">Email</label>
-                <input for="text" id="email" name="email" class="text" required></input>
+                <input for="text" id="email" name="email" class="text" type="email" required></input>
                 <label for="password">Password</label>
-                <input for="text" id="password" name="password" class="text" required></input>
+                <input for="text" id="password" name="password" class="text" type="password" required></input>
                 <input type="submit" value="Sign In" class="submit" >
+				<!-- make same size as create btn -->
                 <a href="#">Forgot password?</a>
                 
                  <a href="#" class="create-a">Create account</a>
+				 <!-- put more margin between for more white space -->
             </form>
             
         </main>
 		
 		<footer class="footer-container">
-			<div class="footer-container__menuLinks">
+			<nav class="footer-container__menuLinks" aria-label="menu">
 				<ul>
 					<h3>Menu</h3>
 					<li><a href="">Home</a></li>
@@ -80,8 +79,8 @@
 					<li><a href="">Keyboard Cables</a></li>
 					<li><a href="">Software</a></li>
 				</ul>
-			</div>
-			<div class="footer-container__helpLinks">
+			</nav>
+			<nav class="footer-container__helpLinks" aria-label="support-and-help">
 				<ul>
 					<h3>Support &amp; Help </h3>
 					<li><a href="">Amazon Store</a></li>
@@ -95,17 +94,18 @@
 					<li><a href="">Refund Policy</a></li>
 					<li><a href="">Privacy Policy</a></li>
 				</ul>
-			</div>
-			<div class="footer-container__socials">
+			</nav>
+			<nav class="footer-container__socials">
 				<ul >
 					<li><a href="" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
 					<li><a href="" aria-label="tiktok"><i class="fab fa-tiktok"></i></a></li>
 					<li><a href="" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
 					<li><a href="" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
 				</ul>
-			</div>
+			</nav>
 			<form action="" class="footer-container__form">
 				<label for="email" required >Email</label>
+				<!-- side by side on inputs (text & btn) -->
 				<input type="email" name="email" id="email" class="footer-container__text" required>
 				<input type="submit" value="Submit" class="footer-container__btn">
 			</form>

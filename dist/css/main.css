@@ -327,35 +327,39 @@ header .header-menu .nike-header-icon-container .icons {
   margin-left: 10px;
 }
 header .header-menu #header-menu {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 30%;
 }
-header .header-menu .hamburger-a {
-  margin-top: 2em;
-}
-header .header-menu .hamburger-a label {
+header .header-menu label {
   margin-right: 1em;
   margin-top: 1.5em;
 }
+header .header-menu label:focus {
+  outline: blue 2px solid;
+}
 @media screen and (min-width: 768px) {
-  header .header-menu .hamburger-a label {
+  header .header-menu label {
     display: none;
   }
 }
-header .header-menu .hamburger-a label img {
+header .header-menu label img {
+  margin-top: 0.5em;
   width: 2.5em;
   -webkit-animation-name: key-cap;
           animation-name: key-cap;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
 @media screen and (min-width: 992px) {
-  header .header-menu .hamburger-a label img {
+  header .header-menu label img {
     display: none;
   }
 }
-header .header-menu .hamburger-a label .paw-close {
+header .header-menu label .paw-close {
   display: none;
 }
 header .header-menu #header-menu:checked ~ label .paw-open {
@@ -376,6 +380,7 @@ header .header-menu nav {
   width: 100vw;
   z-index: -1;
   height: 0vh;
+  visibility: hidden;
   transition: 0.5s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow: hidden;
@@ -383,7 +388,8 @@ header .header-menu nav {
 @media screen and (min-width: 768px) {
   header .header-menu nav {
     overflow: visible;
-    top: 35%;
+    visibility: visible;
+    margin-top: 1em;
   }
 }
 header .header-menu nav ul {
@@ -394,7 +400,6 @@ header .header-menu nav ul {
 }
 @media screen and (min-width: 768px) {
   header .header-menu nav ul {
-    display: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -402,12 +407,10 @@ header .header-menu nav ul {
 }
 @media screen and (min-width: 992px) {
   header .header-menu nav ul {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    margin-top: 2em;
-    align-items: center;
-    justify-content: center;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 2em auto;
   }
 }
 header .header-menu nav ul > li {
@@ -442,13 +445,14 @@ header .header-menu nav ul > li a:hover {
 }
 @media screen and (min-width: 992px) {
   header .header-menu nav ul > li a {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-right: 2em;
   }
 }
 header .header-menu #header-menu:checked ~ nav {
   display: block;
   height: 50vh;
+  visibility: visible;
 }
 
 .home-main {
@@ -466,6 +470,7 @@ header .header-menu #header-menu:checked ~ nav {
   background: url(/dist/img/keyboard1.jpg);
   width: 94vw;
   height: 80vh;
+  margin-top: 1em;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -527,7 +532,7 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .home-main .article-container {
   margin: unset;
-  margin-top: 1em;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
 }
@@ -539,60 +544,64 @@ header .header-menu #header-menu:checked ~ nav {
     align-items: center;
   }
 }
-.home-main .article-container figure {
-  margin-top: 1em;
+.home-main .article-container div figure {
+  margin-bottom: 3em;
+  opacity: 0;
   transition: 1s ease-in-out;
 }
-.home-main .article-container figure.active {
+.home-main .article-container div figure.active {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .home-main .article-container figure {
+  .home-main .article-container div figure {
     text-align: center;
   }
 }
 @media screen and (min-width: 992px) {
-  .home-main .article-container figure {
+  .home-main .article-container div figure {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
   }
 }
-.home-main .article-container figure img {
+.home-main .article-container div figure img {
   width: 94vw;
   border-radius: 0.5em;
   margin-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
-  .home-main .article-container figure img {
+  .home-main .article-container div figure img {
     width: 40vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .home-main .article-container figure img {
+  .home-main .article-container div figure img {
     width: 25vw;
   }
 }
-.home-main .article-container figure figcaption {
+.home-main .article-container div figure figcaption {
   text-align: center;
 }
 @media screen and (min-width: 992px) {
-  .home-main .article-container figure figcaption {
+  .home-main .article-container div figure figcaption {
     margin-left: 2em;
   }
 }
-.home-main .article-container figure figcaption label {
+.home-main .article-container div figure figcaption label {
   margin-top: 1em;
   text-transform: uppercase;
   color: black;
   font-weight: 700;
   font-size: 1.3em;
 }
-.home-main .article-container figure figcaption p {
+.home-main .article-container div figure ul {
+  text-align: center;
+}
+.home-main .article-container div figure ul li {
   margin-top: 1em;
 }
-.home-main .article-container figure figcaption input {
+.home-main .article-container div figure input {
   margin-top: 1em;
   color: white;
   background: #1d6883;
@@ -603,11 +612,11 @@ header .header-menu #header-menu:checked ~ nav {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
   transition: 0.5s ease-in-out;
 }
-.home-main .article-container figure figcaption input:hover {
+.home-main .article-container div figure input:hover {
   box-shadow: rgba(14, 50, 62, 0.51) 0px 5px 13px 2px;
 }
 .home-main .category-container {
-  width: 94vw;
+  margin-bottom: 3em;
   border-radius: 0.5em;
 }
 .home-main .category-container h2 {
@@ -727,9 +736,27 @@ header .header-menu #header-menu:checked ~ nav {
     font-size: 1.5em;
   }
 }
+.home-main .category-container div #btn1, .home-main .category-container div #btn3, .home-main .category-container div #btn5 {
+  -ms-transform: translateX(-13em);
+      transform: translateX(-13em);
+  transition: 2s ease-in-out;
+}
+.home-main .category-container div #btn1.active, .home-main .category-container div #btn3.active, .home-main .category-container div #btn5.active {
+  -ms-transform: translateX(0em);
+      transform: translateX(0em);
+}
+.home-main .category-container div #btn2, .home-main .category-container div #btn4, .home-main .category-container div #btn6 {
+  -ms-transform: translateX(13em);
+      transform: translateX(13em);
+  transition: 2s ease-in-out;
+}
+.home-main .category-container div #btn2.active, .home-main .category-container div #btn4.active, .home-main .category-container div #btn6.active {
+  -ms-transform: translateX(0em);
+      transform: translateX(0em);
+}
 .home-main .trending-container {
   background: white;
-  margin: 0;
+  margin-bottom: 3em;
   border-radius: 0.5em;
   text-align: center;
   padding-bottom: 1em;
@@ -744,49 +771,56 @@ header .header-menu #header-menu:checked ~ nav {
   color: #1d6883;
 }
 @media screen and (min-width: 768px) {
-  .home-main .trending-container div {
+  .home-main .trending-container .tc-parent-div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: baseline;
   }
 }
-.home-main .trending-container div figure {
-  margin-bottom: 1em;
+.home-main .trending-container .tc-parent-div div {
+  margin: 0.5em;
 }
-.home-main .trending-container div figure img {
+.home-main .trending-container .tc-parent-div div a {
+  text-decoration: none;
+  color: black;
+}
+.home-main .trending-container .tc-parent-div div a figure {
+  margin-bottom: 3em;
+}
+.home-main .trending-container .tc-parent-div div a figure img {
   width: 70vw;
   margin-bottom: 1em;
 }
 @media screen and (min-width: 768px) {
-  .home-main .trending-container div figure img {
+  .home-main .trending-container .tc-parent-div div a figure img {
     width: 45vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .home-main .trending-container div figure img {
+  .home-main .trending-container .tc-parent-div div a figure img {
     width: 30vw;
   }
 }
-.home-main .trending-container div figure figcaption :nth-child(2) {
-  color: red;
-  font-weight: bold;
-}
-.home-main .trending-container div figure figcaption :nth-child(3) {
-  text-decoration: line-through;
-}
-.home-main .trending-container div figure figcaption label {
+.home-main .trending-container .tc-parent-div div a figure figcaption label {
   margin-top: 1em;
   text-transform: uppercase;
   color: black;
   font-weight: 700;
   font-size: 1.3em;
 }
-.home-main .trending-container div figure figcaption p {
+.home-main .trending-container .tc-parent-div div a figure figcaption :nth-child(2) {
+  color: red;
+  font-weight: bold;
+}
+.home-main .trending-container .tc-parent-div div a figure figcaption :nth-child(3) {
+  text-decoration: line-through;
+}
+.home-main .trending-container .tc-parent-div div a figure figcaption p {
   margin-top: 1em;
 }
-.home-main .trending-container div figure figcaption input {
-  margin-top: 1em;
+.home-main .trending-container .tc-parent-div div input {
+  margin-bottom: 3em;
   color: black;
   background: #b7ccf2;
   border: none;
@@ -797,19 +831,46 @@ header .header-menu #header-menu:checked ~ nav {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
   transition: 0.2s ease-in-out;
 }
-.home-main .trending-container div figure figcaption input:hover {
+.home-main .trending-container .tc-parent-div div input:hover {
   background: #64f0bf;
   box-shadow: rgba(14, 50, 62, 0.51) 0px 5px 13px 2px;
+}
+.home-main .trending-container .tc-parent-div #img1, .home-main .trending-container .tc-parent-div #img3, .home-main .trending-container .tc-parent-div #img5 {
+  opacity: 0;
+  -ms-transform: translateX(-30em);
+      transform: translateX(-30em);
+  transition: 2s ease-in-out;
+}
+.home-main .trending-container .tc-parent-div #img1.active, .home-main .trending-container .tc-parent-div #img3.active, .home-main .trending-container .tc-parent-div #img5.active {
+  opacity: 1;
+  -ms-transform: translateX(0em);
+      transform: translateX(0em);
+}
+.home-main .trending-container .tc-parent-div #img2, .home-main .trending-container .tc-parent-div #img4, .home-main .trending-container .tc-parent-div #img6 {
+  opacity: 0;
+  -ms-transform: translateX(30em);
+      transform: translateX(30em);
+  transition: 2s ease-in-out;
+}
+.home-main .trending-container .tc-parent-div #img2.active, .home-main .trending-container .tc-parent-div #img4.active, .home-main .trending-container .tc-parent-div #img6.active {
+  opacity: 1;
+  -ms-transform: translateX(0em);
+      transform: translateX(0em);
 }
 
 .login-main {
   position: relative;
   width: 100vw;
-  height: 70vh;
+  height: 100vh;
   background-repeat: no-repeat;
   display: flex;
   flex-grow: 1;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .login-main {
+    height: unset;
+  }
 }
 .login-main h1 {
   font-weight: 900;
@@ -846,6 +907,7 @@ header .header-menu #header-menu:checked ~ nav {
   background: #dedede;
   margin-top: 1em;
   font-size: 1em;
+  padding: 0.5em;
 }
 .login-main form .submit, .login-main form button {
   border: none;
@@ -918,7 +980,7 @@ header .header-menu #header-menu:checked ~ nav {
     height: 80vh;
   }
 }
-.team-banner label {
+.team-banner h1 {
   color: #6f5fac;
   font-weight: 800;
   font-size: 2.5em;
@@ -928,7 +990,7 @@ header .header-menu #header-menu:checked ~ nav {
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
-  .team-banner label {
+  .team-banner h1 {
     font-size: 3.5em;
   }
 }
@@ -937,17 +999,17 @@ header .header-menu #header-menu:checked ~ nav {
   background: #ffcdff;
 }
 .team-main__aboutSection, .team-main__teamSection {
-  color: #6f5fac;
+  color: #524780;
   line-height: 2em;
   padding: 1em;
   margin-top: 2em;
 }
-.team-main__aboutSection h1, .team-main__teamSection h1 {
+.team-main__aboutSection h2, .team-main__teamSection h2 {
   color: #ffffff;
   font-weight: 800;
   font-size: 2em;
 }
-.team-main__aboutSection h1 span, .team-main__teamSection h1 span {
+.team-main__aboutSection h2 span, .team-main__teamSection h2 span {
   text-transform: uppercase;
 }
 .team-main__teamSection {
@@ -978,7 +1040,7 @@ header .header-menu #header-menu:checked ~ nav {
   }
 }
 .team-main__teamSection div figure figcaption {
-  color: #6f5fac;
+  color: #524780;
   font-size: 1.5em;
   font-weight: 700;
 }
@@ -1046,12 +1108,13 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .footer-container__form {
   display: flex;
-  flex-direction: column;
-  align-content: space-around;
-  align-items: center;
+  flex-direction: row;
+  align-items: baseline;
   font-weight: 500;
   margin-top: 1em;
   margin-bottom: 1em;
+  align-content: stretch;
+  justify-content: center;
 }
 @media screen and (min-width: 992px) {
   .footer-container__form {
@@ -1061,6 +1124,7 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .footer-container__form label {
   margin-bottom: 0.5em;
+  margin-right: 1em;
 }
 .footer-container__form .footer-container__text {
   border: none;
@@ -1069,6 +1133,7 @@ header .header-menu #header-menu:checked ~ nav {
 }
 .footer-container__form .footer-container__btn {
   background: #cceaf5;
+  margin-left: 1em;
   color: white;
   cursor: pointer;
   border: none;
@@ -1081,6 +1146,15 @@ header .header-menu #header-menu:checked ~ nav {
 .footer-container__form .footer-container__btn:hover {
   background: #1d6883;
   transition: ease-in-out 0.25s;
+}
+@media screen and (min-width: 992px) {
+  .footer-container__form .footer-container__btn {
+    margin-top: -0.2em;
+  }
+}
+.footer-container__form #btn1 {
+  -ms-transform: translateX(-13em);
+      transform: translateX(-13em);
 }
 .footer-container p {
   text-align: center;

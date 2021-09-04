@@ -30,14 +30,10 @@
 			
 			<div class="header-menu">
 				<input type="checkbox" id="header-menu" />
-				<a href="" aria-label="hamburger-menu" class="hamburger-a">
-					
-
-					<label for="header-menu" class="nike-menu" aria-label="menu">
-						<img src="dist/img/paw.png" alt="" class="paw-open">
-						<img src="dist/img/paws2.png" alt="" class="paw-close">
-					</label>
-				</a>
+				<label for="header-menu" class="nike-menu" aria-label="menu" tabindex="0">
+					<img src="dist/img/paw.png" alt="" class="paw-open">
+					<img src="dist/img/paws2.png" alt="" class="paw-close">
+				</label>
 				<nav>
 					<ul>
 						
@@ -61,109 +57,154 @@
 				</div>
 				<button class="hero-container__btn" id="heroBtn" aria-label="Discover Yunzzi Macaron Keyboard">Discover Keyboard</button>
 			</section>
-			<article class="article-container" role="#" aria-labelledby="ac" id="main">
-				<figure id ="ac" >
-					<img src="/dist/img/keyboard8.jpg" alt="blue-rainbow-keyboard">
-					<figcaption>
-						<label for="Yunzii rainbow blue">yunzii blue rainbow keyboard</label>
-							<p>Pastel keycap design</p>
-							<p>Wired</p>
-							<p>84-key layout</p>
-							<p>19 RGB effects</p>
-							<p>Swappable mechanical keyboard</p>
-							<input type="button" value="View Keyboard"> 
-					</figcaption>
-				</figure>
-				<figure id ="ac">
-					<img src="/dist/img/keyboard.jpg" alt="k-c-84-s-graphite-blue-84-key-hotswap-wireless-mechanical-gaming-keyboard-with-bluetooth-r-g-b-p-b-t-dye-subbed-key-caps">
-					<figcaption>
-						<label for="Yunzii rainbow blue">yunzii graphite blue keyboard</label>
-							<p>Graphite keycap design</p>
-							<p>Wireless</p>
-							<p>84-key layout</p>
-							<p>Bluetooth 5.0</p>
-							<p>Swappable mechanical keyboard</p>
-							<input type="button" value="View Keyboard"> 
-					</figcaption>
-				</figure>
+			<article class="article-container"  id="main">
+				<div role="#" aria-labelledby="fig1">
+					<figure id ="fig1" >
+						<img src="/dist/img/keyboard8.jpg" alt="blue-rainbow-keyboard-image">
+						<div>
+								<figcaption>
+								<label for="Yunzii rainbow blue">yunzii blue rainbow keyboard</label>
+								<!-- move p's to li's under figcaption -->
+									 
+							</figcaption>
+							<ul>
+								<li>Pastel keycap design</li>
+								<li>Wired</li>
+								<li>84-key layout</li>
+								<li>19 RGB effects</li>
+								<li>Swappable mechanical keyboard</li>
+								<input type="button" value="View Keyboard">
+							</ul>
+						</div>	
+					</figure>
+				</div>
+				<div role="#" aria-labelledby="fig2">
+					<figure id="fig2">
+						<img src="/dist/img/keyboard.jpg" alt="graphite-keyboard-image">
+						<div>
+							<figcaption>
+								<label for="Yunzii rainbow blue">yunzii graphite blue keyboard</label>
+							</figcaption>
+							<ul>
+								<li>Graphite keycap design</li>
+								<li>Wireless</li>
+								<li>84-key layout</li>
+								<li>Bluetooth 5.0</li>
+								<li>Swappable mechanical keyboard</li>
+								<input type="button" value="View Keyboard">
+							</ul>
+						</div>
+						
+					</figure>
+				</div>
+				
+				
 			</article>
 			
 			<article class="category-container" role="#" aria-labelledby="wts"> 
 				<!-- aria-describeby could be this too -->
 				<h2 id ="wts">what to shop?</h2>
 					<div id="test">
-						<button id="btn-left">Keyboard Cable</button>
-						<button>Keycaps</button>
-						<button id="btn-left">Wireless</button>
-						<button >Compact- 82 keys</button>
-						<button id="btn-left">Micro- 61 + Keys</button>
-						<button>Mini - 68 + Keys</button>
+						<button id="btn1">Keyboard Cable</button>
+						<button id="btn2">Keycaps</button>
+						<button id="btn3">Wireless</button>
+						<button id="btn4">Compact- 82 keys</button>
+						<button id="btn5">Micro- 61 + Keys</button>
+						<button id="btn6">Mini - 68 + Keys</button>
 					</div>
 			</article>
 			<article class="trending-container" role="#" aria-labelledby="tk">
 				<h2 id ="tk">Trending Keyboards</h2>
-				<div for="Trending Keyboards" role="#" id="figure">
-					<figure id="one" aria-labelledby="figure one">
-						<img src="/dist/img/trending1.jpg" alt="white-keyboard-with-yellow-caps">
-						<figcaption>
-							<label for="milk" >yunzii milk honey keyboard</label>
-								<p>$95 USD</p>
-								<p>$105 USD</p>
-							<input type="button" value="Buy" id="milk" >
-						</figcaption>
-					</figure>
-					<figure id ="figure">
-						<img src="/dist/img/trending2.jpg" alt="black-cream-and-red-keyboard" loading="lazy">
-						<figcaption>
-							<label for="red" >yunzii SP-Red 84 keyboard</label>
-								<p>$95 USD</p>
-								<p>$105 USD</p>
-								<input type="button" value="Buy" id="red" > 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="/dist/img/trending5.jpg" alt="milk-blue-and-pink-cap-set">
-						<figcaption>
-							<label for="milk">yunzii milk keycap set</label>
-								<p>$45 USD</p>
-								<p>$59 USD</p>
-								<input type="button" value="Buy" id="milk"> 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="/dist/img/trending3.jpg" alt="keycool-holiday-keyboard" loading="lazy">
-						<figcaption>
-							<label for="Keycool">yunzii Keycool Holiday keyboard</label>
-								<p>$115 USD</p>
-								<p>$125 USD</p>
-								<input type="button" value="Buy" id="Keycool"> 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="/dist/img/trending6.jpg" alt="doodle-keycap-set" loading="lazy">
-						<figcaption>
-							<label for="doodle">yunzii doodle keycap set</label>
-								<p>$45 USD</p>
-								<p>$59 USD</p>
-								<input type="button" value="Buy" id="doodle"> 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="/dist/img/trending4.jpg" alt="macaron-keyboard-with-pink-keycaps" loading="lazy">
-						<figcaption>
-							<label for="Macaron">yunzii macaron keyboard</label>
-								<p>$100 USD</p>
-								<p>$125 USD</p>
-								<input type="button" value="Buy" id="Macaron"> 
-						</figcaption>
-					</figure>
-				</div>
-				
+				<div class="tc-parent-div" >
+					<div id="img1">
+						<a href="#">
+							<figure >
+								<img src="/dist/img/trending1.jpg" alt="keyboard-image" loading="lazy">
+								<figcaption  >
+									<label  >yunzii milk honey keyboard</label>
+									<p aria-hidden="true">$95 USD</p>
+									<p aria-hidden="true">$105 USD</p>
+										
+								</figcaption>							
+							</figure>
+						</a>
+						<input type="button" value="Buy">
+					</div>
+					<div id="img2">
+						<a href="#" >
+							<figure>
+								<img src="/dist/img/trending2.jpg" alt="keyboard-image" loading="lazy">
+								<figcaption>
+									<label >yunzii SP-Red 84 keyboard</label>
+										<p aria-hidden="true">$95 USD</p>
+										<p aria-hidden="true">$105 USD</p>
+										
+								</figcaption>
+							</figure>
+						</a>
+							<input type="button" value="Buy" >
+					</div>
+					<div id="img3">
+						<a href="">
+							<figure>
+								<img src="/dist/img/trending5.jpg" alt="keyboard-image">
+								<figcaption>
+									<label>yunzii milk keycap set</label>
+										<p aria-hidden="true">$45 USD</p>
+										<p aria-hidden="true">$59 USD</p>
+										
+								</figcaption>
+							</figure>
+						</a>
+						<input type="button" value="Buy" > 
+					</div>
+					<div id="img4">
+						<a href="#">
+							<figure>
+								<img src="/dist/img/trending3.jpg" alt="keyboard-image" loading="lazy">
+								<figcaption>
+									<label >yunzii Keycool Holiday keyboard</label>
+										<p aria-hidden="true">$115 USD</p>
+										<p aria-hidden="true">$125 USD</p>
+										
+								</figcaption>
+							</figure>
+							 
+						</a>
+						<input type="button" value="Buy">
+					</div>
+					<div id="img5">
+						<a href="#">
+							<figure>
+								<img src="/dist/img/trending6.jpg" alt="kaycap-image" loading="lazy">
+								<figcaption>
+									<label >yunzii doodle keycap set</label>
+										<p aria-hidden="true">$45 USD</p>
+										<p aria-hidden="true">$59 USD</p>		 
+								</figcaption>
+							</figure>
+						</a>
+						<input type="button" value="Buy" >
+					</div>
+					<div id="img6">
+						<a href="#">
+							<figure>
+								<img src="/dist/img/trending4.jpg" alt="keycap-image" loading="lazy">
+								<figcaption>
+									<label >yunzii macaron keyboard</label>
+										<p aria-hidden="true">$100 USD</p>
+										<p aria-hidden="true">$125 USD</p>	
+								</figcaption>
+							</figure>
+						</a>
+						<input type="button" value="Buy" > 
+					</div>		
+				</div>	
 			</article>
 		</main>
 		
 		<footer class="footer-container">
-			<div class="footer-container__menuLinks">
+			<nav class="footer-container__menuLinks">
 				<ul>
 					<h3>Menu</h3>
 					<li><a href="">Home</a></li>
@@ -173,8 +214,8 @@
 					<li><a href="">Keyboard Cables</a></li>
 					<li><a href="">Software</a></li>
 				</ul>
-			</div>
-			<div class="footer-container__helpLinks">
+			</nav>
+			<nav class="footer-container__helpLinks">
 				<ul>
 					<h3>Support &amp; Help </h3>
 					<li><a href="">Amazon Store</a></li>
@@ -188,18 +229,18 @@
 					<li><a href="">Refund Policy</a></li>
 					<li><a href="">Privacy Policy</a></li>
 				</ul>
-			</div>
-			<div class="footer-container__socials">
+			</nav>
+			<nav class="footer-container__socials">
 				<ul >
 					<li><a href="" aria-label="twitter"><i class="fab fa-twitter"></i></a></li>
 					<li><a href="" aria-label="tiktok"><i class="fab fa-tiktok"></i></a></li>
 					<li><a href="" aria-label="instagram"><i class="fab fa-instagram"></i></a></li>
 					<li><a href="" aria-label="youtube"><i class="fab fa-youtube"></i></a></li>
 				</ul>
-			</div>
+			</nav>
 			<form action="" class="footer-container__form">
 				<label for="email" required >Email</label>
-				<input type="email" name="email" id="email" class="footer-container__text" required>
+				<input for="email" type="email" name="email" id="email" class="footer-container__text" required>
 				<input type="submit" value="Submit" class="footer-container__btn">
 			</form>
 			<p>&#169; 2021, Yunzii Mechanical Keyboards</p>
