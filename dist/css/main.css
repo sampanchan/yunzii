@@ -888,8 +888,8 @@ header .header-menu #header-menu:checked ~ nav {
   align-items: center;
   padding: 3em;
   width: 95vw;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 3em;
+  margin-bottom: 3em;
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 }
@@ -945,6 +945,7 @@ header .header-menu #header-menu:checked ~ nav {
 .login-main form .create-a {
   background: #f6cdd6;
   padding: 1em;
+  margin-top: 3em;
   border-radius: 0.5em;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 }

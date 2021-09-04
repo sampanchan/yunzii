@@ -148,7 +148,36 @@ var waypoint = new Waypoint({
     },
     offset: '95%'
 })
+// var waypoint = new Waypoint({
+//     element: document.getElementById('teamMember1'),
+//     handler: function () {
+//         let btn =document.getElementById('teamMember1');
+//         btn.classList.add('active');
+//         console.log('hello world')
 
+//     },
+//     offset: '95%'
+// })
+// var waypoint = new Waypoint({
+//     element: document.getElementById('teamMember2'),
+//     handler: function () {
+//         let btn =document.getElementById('teamMember2');
+//         btn.classList.add('active');
+//         console.log('hello world')
+
+//     },
+//     offset: '95%'
+// })
+// var waypoint = new Waypoint({
+//     element: document.getElementById('teamMember3'),
+//     handler: function () {
+//         let btn =document.getElementById('teamMember3');
+//         btn.classList.add('active');
+//         console.log('hello world')
+
+//     },
+//     offset: '95%'
+// })
 
 
 // var waypoint = new Waypoint({

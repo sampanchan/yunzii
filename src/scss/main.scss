@@ -728,8 +728,8 @@ header{
     	align-items: center;
 		padding: 3em;
 		width: 95vw;
-		margin-top: 2em;
-		margin-bottom: 2em;
+		margin-top: variables.$marginLarge;
+		margin-bottom: variables.$marginLarge;
 		border-radius: .5em;
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 		@include mixins.bp-large{
@@ -782,6 +782,7 @@ header{
 		.create-a{
 			background: #f6cdd6;
 			padding: 1em;
+			margin-top: variables.$marginLarge;
 			border-radius: .5em;
 			box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 13px 2px;
 			&:hover{
@@ -896,6 +897,13 @@ header{
 					}
 				}
 			}
+			// #teamMember1, #teamMember2, #teamMember3{
+			// 	opacity: 0;
+			// 	transition: 2s ease-in-out;
+			// 	&.active{
+			// 		opacity: 1;
+			// 	}
+			// } 
 			
 			
 		}
