@@ -332,6 +332,11 @@ header .header-menu #header-menu {
   top: 50%;
   right: 30%;
 }
+@media screen and (min-width: 768px) {
+  header .header-menu #header-menu input {
+    display: block;
+  }
+}
 header .header-menu label {
   margin-right: 1em;
   margin-top: 1.5em;
@@ -453,6 +458,11 @@ header .header-menu #header-menu:checked ~ nav {
   display: block;
   height: 50vh;
   visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  header .header-menu #header-menu:checked ~ nav {
+    visibility: hidden;
+  }
 }
 
 .home-main {

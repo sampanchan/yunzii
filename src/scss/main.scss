@@ -194,6 +194,11 @@ header{
 			position: absolute;
     		top: 50%;
     		right: 30%;
+			input{
+				@include mixins.bp-medium{
+					display: block;
+				}
+			}
 		}
 		label {
 			margin-right: 1em;
@@ -232,6 +237,7 @@ header{
 			.paw-close{
 				display: block;
 			}
+			
 			
 		}
 		nav{
@@ -321,6 +327,9 @@ header{
 			display: block;
 			height: 50vh;
 			visibility: visible;
+			@include mixins.bp-medium{
+				visibility: hidden;
+			}
 		}
 	}
 
