@@ -364,7 +364,7 @@ header .header-menu label .paw-close {
 }
 @media screen and (min-width: 768px) {
   header .header-menu .header-menu input {
-    display: block;
+    display: none;
   }
 }
 header .header-menu #header-menu:checked ~ label .paw-open {

@@ -225,7 +225,7 @@ header{
 		.header-menu{
 			input{
 				@include mixins.bp-medium{
-					display: block;
+					display: none;
 				}
 			}
 		}
