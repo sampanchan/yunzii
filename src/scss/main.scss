@@ -194,11 +194,7 @@ header{
 			position: absolute;
     		top: 50%;
     		right: 30%;
-			input{
-				@include mixins.bp-medium{
-					display: block;
-				}
-			}
+			
 		}
 		label {
 			margin-right: 1em;
@@ -224,6 +220,13 @@ header{
 			}
 			.paw-close{
 				display: none;
+			}
+		}
+		.header-menu{
+			input{
+				@include mixins.bp-medium{
+					display: block;
+				}
 			}
 		}
 		
