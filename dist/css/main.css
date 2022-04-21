@@ -319,6 +319,11 @@ header .header-menu {
   flex-direction: row;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  header .header-menu input {
+    display: none;
+  }
+}
 header .header-menu .nike-header-icon-container {
   z-index: 100;
   margin: 5px;
@@ -362,11 +367,6 @@ header .header-menu label img {
 header .header-menu label .paw-close {
   display: none;
 }
-@media screen and (min-width: 768px) {
-  header .header-menu .header-menu input {
-    display: none;
-  }
-}
 header .header-menu #header-menu:checked ~ label .paw-open {
   display: none;
 }
@@ -380,7 +380,7 @@ header .header-menu nav {
   background-position: bottom right;
   background-position-x: 80%;
   position: absolute;
-  top: 115%;
+  top: 105%;
   right: 0;
   width: 100vw;
   z-index: -1;
@@ -456,7 +456,7 @@ header .header-menu nav ul > li a:hover {
 }
 header .header-menu #header-menu:checked ~ nav {
   display: block;
-  height: 50vh;
+  height: 55vh;
   visibility: visible;
 }
 @media screen and (min-width: 768px) {
